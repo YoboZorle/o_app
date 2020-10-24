@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:oapp/pages/menu_widget/menu_widget.dart';
-import 'package:oapp/plugins/pin_put.dart';
 import 'package:oapp/values/values.dart';
+import 'package:pinput/pin_put/pin_put.dart';
 
 class OtpWidget extends StatefulWidget {
   @override

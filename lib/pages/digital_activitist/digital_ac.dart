@@ -110,7 +110,7 @@ class _DigitalAcState extends State<DigitalAc>
                           handle:
                               NestedScrollView.sliverOverlapAbsorberHandleFor(
                                   context),
-                          child: SliverSafeArea(
+                          sliver: SliverSafeArea(
                             top: false,
                             sliver: SliverAppBar(
                               floating: true,
