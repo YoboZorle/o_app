@@ -30,18 +30,6 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'OApp Welcome',
       debugShowCheckedModeBanner: false,
-//      home: Container(
-//        color: Colors.red,
-//        child: SplashScreen(
-//          'assets/flare/oapp_logo_try.flr',
-//          RegWidget(),
-//          until: () => Future.delayed(Duration(seconds: 20)),
-//          width: double.infinity,
-//          height: double.infinity,
-//          startAnimation: 'anim_splash',
-//          // backgroundColor: Color(0xff181818),
-//        ),
-//      ),
       home: SplashSscreen(),
     );
   }
@@ -73,11 +61,13 @@ class _SplashSscreenState extends State<SplashSscreen> {
   }
 
   void navigationPage() {
-    Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (BuildContext context) => RegWidget()));
-//        PageRouteBuilder(
-//            transitionDuration: Duration(milliseconds: 900),
-//            pageBuilder: (_, __, ___) => RegWidget()));
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => new RegWidget(),
+        fullscreenDialog: true,
+      ),
+    );
   }
 
   @override
