@@ -152,7 +152,9 @@ class _OMerchState extends State<OMerch> with SingleTickerProviderStateMixin {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Settings(), fullscreenDialog: true),
+                        MaterialPageRoute(
+                            builder: (context) => Settings(),
+                            fullscreenDialog: true),
                       );
                     },
                   ),

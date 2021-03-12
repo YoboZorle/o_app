@@ -48,8 +48,8 @@ class _OMeetUpState extends State<OMeetUp> {
         children: <Widget>[
           new Container(
             decoration: new BoxDecoration(),
-            child:
-            new FlareActor("assets/flare/el_bg.flr", fit: BoxFit.cover), // bg_oapp.flr
+            child: new FlareActor("assets/flare/el_bg.flr",
+                fit: BoxFit.cover), // bg_oapp.flr
           ),
           SafeArea(
             child: Container(
@@ -74,10 +74,11 @@ class _OMeetUpState extends State<OMeetUp> {
                           Column(
                             children: <Widget>[
                               GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => OMeetUpLive()),
+                                    MaterialPageRoute(
+                                        builder: (context) => OMeetUpLive()),
                                   );
                                 },
                                 child: Row(
@@ -98,7 +99,8 @@ class _OMeetUpState extends State<OMeetUp> {
                                     ),
                                     Flexible(
                                       child: Padding(
-                                        padding: const EdgeInsets.only(left: 8.0),
+                                        padding:
+                                            const EdgeInsets.only(left: 8.0),
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
@@ -107,11 +109,12 @@ class _OMeetUpState extends State<OMeetUp> {
                                               padding: const EdgeInsets.only(
                                                   bottom: 0.0),
                                               child: Text(
-                                                'African Women Developers MeetUp In Lagos.',
+                                                'African Women Developers MeetUp Kaduna.',
                                                 maxLines: 2,
                                                 overflow: TextOverflow.ellipsis,
                                                 style: TextStyle(
-                                                    color: AppColors.primaryText,
+                                                    color:
+                                                        AppColors.primaryText,
                                                     fontWeight: FontWeight.w700,
                                                     fontFamily: 'Ubuntu',
                                                     letterSpacing: 0.3,
@@ -119,8 +122,8 @@ class _OMeetUpState extends State<OMeetUp> {
                                               ),
                                             ),
                                             Padding(
-                                              padding:
-                                                  const EdgeInsets.only(top: 8.0),
+                                              padding: const EdgeInsets.only(
+                                                  top: 8.0),
                                               child: Column(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.start,
@@ -135,16 +138,17 @@ class _OMeetUpState extends State<OMeetUp> {
                                                               .lightGreenAccent),
                                                       SizedBox(width: 3),
                                                       Text(
-                                                        '09:00 PM',
+                                                        '04:30 PM',
                                                         maxLines: 1,
-                                                        overflow:
-                                                            TextOverflow.ellipsis,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
                                                         style: TextStyle(
                                                             color: Colors
                                                                 .lightGreenAccent,
                                                             fontWeight:
                                                                 FontWeight.w500,
-                                                            fontFamily: 'Ubuntu',
+                                                            fontFamily:
+                                                                'Ubuntu',
                                                             letterSpacing: 0.3,
                                                             fontSize: 13),
                                                       ),
@@ -159,16 +163,17 @@ class _OMeetUpState extends State<OMeetUp> {
                                                               .lightGreenAccent),
                                                       SizedBox(width: 3),
                                                       Text(
-                                                        'Mon 7th, SEP 2020 ',
+                                                        'Fri 19th, MAR 2021',
                                                         maxLines: 1,
-                                                        overflow:
-                                                            TextOverflow.ellipsis,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
                                                         style: TextStyle(
                                                             color: Colors
                                                                 .lightGreenAccent,
                                                             fontWeight:
                                                                 FontWeight.w500,
-                                                            fontFamily: 'Ubuntu',
+                                                            fontFamily:
+                                                                'Ubuntu',
                                                             letterSpacing: 0.3,
                                                             fontSize: 13),
                                                       ),
@@ -184,13 +189,14 @@ class _OMeetUpState extends State<OMeetUp> {
                                                       Text(
                                                         '1.23k people attending',
                                                         maxLines: 1,
-                                                        overflow:
-                                                            TextOverflow.ellipsis,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
                                                         style: TextStyle(
                                                             color: Colors.white,
                                                             fontWeight:
                                                                 FontWeight.w500,
-                                                            fontFamily: 'Ubuntu',
+                                                            fontFamily:
+                                                                'Ubuntu',
                                                             letterSpacing: 0.3,
                                                             fontSize: 13),
                                                       ),
@@ -235,7 +241,7 @@ class _OMeetUpState extends State<OMeetUp> {
                               ),
                               Container(
                                   height: 0.6,
-                                  margin: EdgeInsets.symmetric(vertical: 10),
+                                  margin: EdgeInsets.symmetric(vertical: 15),
                                   width: MediaQuery.of(context).size.width,
                                   color: AppColors.primaryText),
                               Row(
@@ -281,7 +287,7 @@ class _OMeetUpState extends State<OMeetUp> {
                                     Icon(Icons.more_horiz,
                                         color: AppColors.primaryText, size: 20),
                                   ]),
-                              SizedBox(height: 30),
+                              SizedBox(height: 40),
                             ],
                           ),
 
@@ -289,10 +295,11 @@ class _OMeetUpState extends State<OMeetUp> {
                           Column(
                             children: <Widget>[
                               GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => OMeetUpLive()),
+                                    MaterialPageRoute(
+                                        builder: (context) => OMeetUpLive()),
                                   );
                                 },
                                 child: Row(
@@ -313,7 +320,8 @@ class _OMeetUpState extends State<OMeetUp> {
                                     ),
                                     Flexible(
                                       child: Padding(
-                                        padding: const EdgeInsets.only(left: 8.0),
+                                        padding:
+                                            const EdgeInsets.only(left: 8.0),
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
@@ -326,7 +334,8 @@ class _OMeetUpState extends State<OMeetUp> {
                                                 maxLines: 2,
                                                 overflow: TextOverflow.ellipsis,
                                                 style: TextStyle(
-                                                    color: AppColors.primaryText,
+                                                    color:
+                                                        AppColors.primaryText,
                                                     fontWeight: FontWeight.w700,
                                                     fontFamily: 'Ubuntu',
                                                     letterSpacing: 0.3,
@@ -334,8 +343,8 @@ class _OMeetUpState extends State<OMeetUp> {
                                               ),
                                             ),
                                             Padding(
-                                              padding:
-                                                  const EdgeInsets.only(top: 8.0),
+                                              padding: const EdgeInsets.only(
+                                                  top: 8.0),
                                               child: Column(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.start,
@@ -352,14 +361,15 @@ class _OMeetUpState extends State<OMeetUp> {
                                                       Text(
                                                         '03:00 PM',
                                                         maxLines: 1,
-                                                        overflow:
-                                                            TextOverflow.ellipsis,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
                                                         style: TextStyle(
                                                             color: Colors
                                                                 .lightGreenAccent,
                                                             fontWeight:
                                                                 FontWeight.w500,
-                                                            fontFamily: 'Ubuntu',
+                                                            fontFamily:
+                                                                'Ubuntu',
                                                             letterSpacing: 0.3,
                                                             fontSize: 13),
                                                       ),
@@ -374,16 +384,17 @@ class _OMeetUpState extends State<OMeetUp> {
                                                               .lightGreenAccent),
                                                       SizedBox(width: 3),
                                                       Text(
-                                                        'Sun 30th, AUG 2020 ',
+                                                        'Sat 27th, MAR 2021',
                                                         maxLines: 1,
-                                                        overflow:
-                                                            TextOverflow.ellipsis,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
                                                         style: TextStyle(
                                                             color: Colors
                                                                 .lightGreenAccent,
                                                             fontWeight:
                                                                 FontWeight.w500,
-                                                            fontFamily: 'Ubuntu',
+                                                            fontFamily:
+                                                                'Ubuntu',
                                                             letterSpacing: 0.3,
                                                             fontSize: 13),
                                                       ),
@@ -399,13 +410,14 @@ class _OMeetUpState extends State<OMeetUp> {
                                                       Text(
                                                         '537 people attending',
                                                         maxLines: 1,
-                                                        overflow:
-                                                            TextOverflow.ellipsis,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
                                                         style: TextStyle(
                                                             color: Colors.white,
                                                             fontWeight:
                                                                 FontWeight.w500,
-                                                            fontFamily: 'Ubuntu',
+                                                            fontFamily:
+                                                                'Ubuntu',
                                                             letterSpacing: 0.3,
                                                             fontSize: 13),
                                                       ),
@@ -441,7 +453,7 @@ class _OMeetUpState extends State<OMeetUp> {
                               ),
                               Container(
                                   height: 0.6,
-                                  margin: EdgeInsets.symmetric(vertical: 10),
+                                  margin: EdgeInsets.symmetric(vertical: 15),
                                   width: MediaQuery.of(context).size.width,
                                   color: AppColors.primaryText),
                               Row(
@@ -486,7 +498,7 @@ class _OMeetUpState extends State<OMeetUp> {
                                     Icon(Icons.more_horiz,
                                         color: AppColors.primaryText, size: 20),
                                   ]),
-                              SizedBox(height: 30),
+                              SizedBox(height: 35),
                             ],
                           ),
 
@@ -503,7 +515,7 @@ class _OMeetUpState extends State<OMeetUp> {
                                       image: DecorationImage(
                                           fit: BoxFit.cover,
                                           image: NetworkImage(
-                                              'https://ireporteronline.com.ng/wp-content/uploads/2019/09/bb.jpeg.jpg')),
+                                              'https://community.wacom.com/eu/wp-content/uploads/2019/09/Click-On-Kaduna-Blogpost-Header.png')),
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(8.0)),
                                       color: Colors.grey.withOpacity(0.3),
@@ -520,7 +532,7 @@ class _OMeetUpState extends State<OMeetUp> {
                                             padding: const EdgeInsets.only(
                                                 bottom: 0.0),
                                             child: Text(
-                                              'Team Osinbajo for 2023 Virtual MeetUp August.',
+                                              'Click-On Kaduna by Alice Lindenau',
                                               maxLines: 2,
                                               overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
@@ -572,7 +584,7 @@ class _OMeetUpState extends State<OMeetUp> {
                                                             .lightGreenAccent),
                                                     SizedBox(width: 3),
                                                     Text(
-                                                      'Fri 21st, AUG 2020 ',
+                                                      'Tue 1st, APR 2021',
                                                       maxLines: 1,
                                                       overflow:
                                                           TextOverflow.ellipsis,
@@ -621,7 +633,7 @@ class _OMeetUpState extends State<OMeetUp> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 8.0),
                                 child: ReadMoreText(
-                                  'A community call for all the lovers and supporters of the #OsinbajoFor2023 to contribute, meet and suggest ideas and solutions to aid The Prof and His Team provide strategic plans to better the lives of the good citizens of Nigeria. Be a concerned citizen and join the move.',
+                                  'Don’t you just love to show your skills and bring creativity to the world? We sure do. We believe the way in which artists create and share their work with the rest of the world is breathtaking, and we encourage everyone to discover and explore their creative streak. Which is why we cherish organizations that support creatives around the world who have limited access to tools and programs that would help them unleash their creativity. And today, we are happy to talk about our partner, Click-On Kaduna.',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w400,
@@ -638,52 +650,49 @@ class _OMeetUpState extends State<OMeetUp> {
                               ),
                               Container(
                                   height: 0.6,
-                                  margin: EdgeInsets.symmetric(vertical: 10),
+                                  margin: EdgeInsets.symmetric(vertical: 15),
                                   width: MediaQuery.of(context).size.width,
                                   color: AppColors.primaryText),
-                              Row(
-                                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    new InkWell(
-                                      onTap: () => print('hello'),
-                                      child: new Container(
-                                        margin: EdgeInsets.only(top: 3),
-                                        decoration: new BoxDecoration(
-                                          color: Colors.transparent,
-                                          border: new Border.all(
-                                              color: Color(0xFFFA4B4B),
-                                              width: 0.8),
-                                          borderRadius:
-                                              new BorderRadius.circular(10.0),
-                                        ),
-                                        child: new Center(
-                                          child: Container(
-                                            margin: EdgeInsets.only(
-                                                left: 12,
-                                                right: 12,
-                                                top: 7,
-                                                bottom: 7),
-                                            child: new Text('Request an invite',
-                                                style: TextStyle(
-                                                    color: Color(0xFFFA4B4B),
-                                                    fontWeight: FontWeight.w400,
-                                                    fontFamily: 'Ubuntu',
-                                                    fontSize: 13.5)),
-                                          ),
-                                        ),
+                              Row(children: <Widget>[
+                                new InkWell(
+                                  onTap: () => print('hello'),
+                                  child: new Container(
+                                    margin: EdgeInsets.only(top: 3),
+                                    decoration: new BoxDecoration(
+                                      color: Colors.transparent,
+                                      border: new Border.all(
+                                          color: Color(0xFFFA4B4B), width: 0.8),
+                                      borderRadius:
+                                          new BorderRadius.circular(10.0),
+                                    ),
+                                    child: new Center(
+                                      child: Container(
+                                        margin: EdgeInsets.only(
+                                            left: 12,
+                                            right: 12,
+                                            top: 7,
+                                            bottom: 7),
+                                        child: new Text('Request an invite',
+                                            style: TextStyle(
+                                                color: Color(0xFFFA4B4B),
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Ubuntu',
+                                                fontSize: 13.5)),
                                       ),
                                     ),
-                                    Expanded(child: SizedBox()),
-                                    Icon(Icons.reply,
-                                        color: AppColors.primaryText, size: 20),
-                                    SizedBox(width: 15),
-                                    Icon(Icons.content_copy,
-                                        color: AppColors.primaryText, size: 20),
-                                    SizedBox(width: 15),
-                                    Icon(Icons.more_horiz,
-                                        color: AppColors.primaryText, size: 20),
-                                  ]),
-                              SizedBox(height: 30),
+                                  ),
+                                ),
+                                Expanded(child: SizedBox()),
+                                Icon(Icons.reply,
+                                    color: AppColors.primaryText, size: 20),
+                                SizedBox(width: 15),
+                                Icon(Icons.content_copy,
+                                    color: AppColors.primaryText, size: 20),
+                                SizedBox(width: 15),
+                                Icon(Icons.more_horiz,
+                                    color: AppColors.primaryText, size: 20),
+                              ]),
+                              SizedBox(height: 35),
                             ],
                           ),
 
@@ -700,7 +709,7 @@ class _OMeetUpState extends State<OMeetUp> {
                                       image: DecorationImage(
                                           fit: BoxFit.cover,
                                           image: NetworkImage(
-                                              'https://cdn.dribbble.com/users/1266023/screenshots/3593146/lagos_meetup-01.jpg')),
+                                              'https://www.cio.co.ke/wp-content/uploads/2017/09/Developers.jpg')),
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(8.0)),
                                       color: Colors.grey.withOpacity(0.3),
@@ -717,7 +726,7 @@ class _OMeetUpState extends State<OMeetUp> {
                                             padding: const EdgeInsets.only(
                                                 bottom: 0.0),
                                             child: Text(
-                                              'LAGOS MEET on OApp.',
+                                              'KADUNA MEET on El-Rufai App.',
                                               maxLines: 2,
                                               overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
@@ -769,7 +778,7 @@ class _OMeetUpState extends State<OMeetUp> {
                                                             .lightGreenAccent),
                                                     SizedBox(width: 3),
                                                     Text(
-                                                      'Fri 21st, AUG 2020 ',
+                                                      'Fri 21st, AUG 2021',
                                                       maxLines: 1,
                                                       overflow:
                                                           TextOverflow.ellipsis,
@@ -835,7 +844,7 @@ class _OMeetUpState extends State<OMeetUp> {
                               ),
                               Container(
                                   height: 0.6,
-                                  margin: EdgeInsets.symmetric(vertical: 10),
+                                  margin: EdgeInsets.symmetric(vertical: 15),
                                   width: MediaQuery.of(context).size.width,
                                   color: AppColors.primaryText),
                               Row(
@@ -880,7 +889,7 @@ class _OMeetUpState extends State<OMeetUp> {
                                     Icon(Icons.more_horiz,
                                         color: AppColors.primaryText, size: 20),
                                   ]),
-                              SizedBox(height: 30),
+                              SizedBox(height: 35),
                             ],
                           ),
                         ],
@@ -922,12 +931,14 @@ class _OMeetUpState extends State<OMeetUp> {
                         semanticsLabel: 'star notif icon'),
                   ),
                 ]),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MenuWidget(), fullscreenDialog: true),
-                );
-              }),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => MenuWidget(),
+                        fullscreenDialog: true),
+                  );
+                }),
             Container(
               padding: EdgeInsets.only(top: 8),
               child: Row(
