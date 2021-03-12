@@ -35,7 +35,7 @@ class _RegWidgetState extends State<RegWidget> with TickerProviderStateMixin {
 //            ),
 //          ),
           child:
-              new FlareActor("assets/flare/reg_bg_oapp.flr", fit: BoxFit.cover),
+              new FlareActor("assets/flare/el_welcome.flr", fit: BoxFit.cover),
         ),
         SafeArea(
             child: GestureDetector(
@@ -218,7 +218,11 @@ class _RegWidgetState extends State<RegWidget> with TickerProviderStateMixin {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => OtpWidget()),
+                        MaterialPageRoute(
+                          builder: (context) =>
+                          new OtpWidget(),
+                          fullscreenDialog: true,
+                        ),
                       );
                     },
                   ))),
@@ -270,7 +274,11 @@ class _RegWidgetState extends State<RegWidget> with TickerProviderStateMixin {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Try()),
+                MaterialPageRoute(
+                  builder: (context) =>
+                  new Try(),
+                  fullscreenDialog: true,
+                ),
               );
             },
           ),

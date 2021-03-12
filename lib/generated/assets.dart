@@ -3,17 +3,16 @@ class Assets {
   Assets._();
 
   static const String assetsImagesB0 = 'assets/images/b0.png';
-  static const String flareAnimElrufaiSplash =
-      'assets/flare/anim_elrufai_splash.flr';
+  static const String flareAnimElrufaiSplash = 'assets/flare/anim_elrufai_splash.flr';
   static const String flareBgOapp = 'assets/flare/bg_oapp.flr';
   static const String flareElBg = 'assets/flare/el_bg.flr';
+  static const String flareElWelcome = 'assets/flare/el_welcome.flr';
   static const String flareLiveBg = 'assets/flare/live_bg.flr';
   static const String flareLogoOapp = 'assets/flare/logo_oapp.flr';
   static const String flareLogoOappSmall = 'assets/flare/logo_oapp_small.flr';
   static const String flareNewBgOapp = 'assets/flare/new_bg_oapp.flr';
   static const String flareOappLogoTry = 'assets/flare/oapp_logo_try.flr';
   static const String flareOappSplashAnim = 'assets/flare/oapp_splash_anim.flr';
-  static const String flareRegBgOapp = 'assets/flare/reg_bg_oapp.flr';
   static const String fontsUbuntuRegular = 'assets/fonts/Ubuntu-Regular.ttf';
   static const String images1 = 'assets/images/1.png';
   static const String images2 = 'assets/images/2.png';
@@ -26,8 +25,7 @@ class Assets {
   static const String imagesB0 = 'assets/images/b0.jpg';
   static const String imagesB1 = 'assets/images/b1.jpeg';
   static const String imagesChild = 'assets/images/child.jpg';
-  static const String imagesDigitalActivitist =
-      'assets/images/digital_activitist.png';
+  static const String imagesDigitalActivitist = 'assets/images/digital_activitist.png';
   static const String imagesIg = 'assets/images/ig.png';
   static const String imagesJuly = 'assets/images/july.png';
   static const String imagesJune = 'assets/images/june.png';
@@ -64,4 +62,5 @@ class Assets {
   static const String svgShareLive = 'assets/svg/share_live.svg';
   static const String svgStar = 'assets/svg/star.svg';
   static const String videosLive = 'assets/videos/live.mp4';
+
 }

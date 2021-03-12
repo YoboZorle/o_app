@@ -93,7 +93,7 @@ class OtpWidgetState extends State<OtpWidget> {
             fit: StackFit.passthrough,
             children: <Widget>[
               new Container(
-                child: new FlareActor("assets/flare/reg_bg_oapp.flr",
+                child: new FlareActor("assets/flare/el_welcome.flr",
                     fit: BoxFit.cover),
               ),
               Builder(

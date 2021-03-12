@@ -62,7 +62,7 @@ class _TryState extends State<Try> {
                 // color: Colors.blue,
                 child: FlareActor(
                   // Using Flare Animations
-                  "assets/flare/reg_bg_oapp.flr",
+                  "assets/flare/el_welcome.flr",
                   alignment: Alignment.center,
                   fit: BoxFit.cover,
                   animation: _animationName,
@@ -164,10 +164,14 @@ class _TryState extends State<Try> {
               width: MediaQuery.of(context).size.width * 1,
               child: FlatButton(
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute<Null>(
-                        builder: (BuildContext context) {
-                      return new RegWidget();
-                    }));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            new RegWidget(),
+                        fullscreenDialog: true,
+                      ),
+                    );
                   },
                   color: AppColors.primaryText,
                   splashColor: AppColors.primaryText.withOpacity(0.5),
@@ -190,10 +194,14 @@ class _TryState extends State<Try> {
               width: MediaQuery.of(context).size.width * 1,
               child: FlatButton(
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute<Null>(
-                        builder: (BuildContext context) {
-                      return new RegWidget();
-                    }));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                        new RegWidget(),
+                        fullscreenDialog: true,
+                      ),
+                    );
                   },
                   // color: AppColors.primaryText,
                   splashColor: Colors.grey[200],
