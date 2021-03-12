@@ -317,7 +317,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DigitalAc()),
+                          MaterialPageRoute(builder: (context) => DigitalAc(), fullscreenDialog: true),
                         );
                       },
                     ))),
@@ -366,7 +366,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => WeekReview()),
+                        MaterialPageRoute(builder: (context) => WeekReview(), fullscreenDialog: true),
                       );
                     },
                   ),
@@ -416,7 +416,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => MoveWithOs()),
+                          MaterialPageRoute(builder: (context) => MoveWithOs(), fullscreenDialog: true),
                         );
                       },
                     ))),
@@ -466,7 +466,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => TheMan(),
+                            builder: (context) => TheMan(), fullscreenDialog: true
                           ));
                     },
                   ),
@@ -517,7 +517,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DigitalTownhall()),
+                                builder: (context) => DigitalTownhall(), fullscreenDialog: true),
                           );
                         }))),
             Container(
@@ -549,7 +549,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                             Container(
                               margin: EdgeInsets.only(left: 25),
                               child: Text(
-                                "O-MEET UP",
+                                "El-MEET UP",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                   color: AppColors.primaryText,
@@ -566,7 +566,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => OMeetUp()),
+                          MaterialPageRoute(builder: (context) => OMeetUp(), fullscreenDialog: true),
                         );
                       }),
                 )),
@@ -599,7 +599,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                             Container(
                               margin: EdgeInsets.only(left: 25),
                               child: Text(
-                                "O-Merch",
+                                "El-Merch",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                   color: AppColors.primaryText,
@@ -616,7 +616,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => OMerch()),
+                          MaterialPageRoute(builder: (context) => OMerch(), fullscreenDialog: true),
                         );
                       }),
                 )),

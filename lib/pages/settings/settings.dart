@@ -24,7 +24,7 @@ class _SettingsState extends State<Settings> with TickerProviderStateMixin {
         new Container(
           decoration: new BoxDecoration(),
           child:
-              new FlareActor("assets/flare/new_bg_oapp.flr", fit: BoxFit.cover),
+              new FlareActor("assets/flare/el_bg.flr", fit: BoxFit.cover),
         ),
         SafeArea(child: _body()),
       ],

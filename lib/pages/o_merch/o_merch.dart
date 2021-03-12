@@ -55,7 +55,7 @@ class _OMerchState extends State<OMerch> with SingleTickerProviderStateMixin {
       children: <Widget>[
         new Container(
           decoration: new BoxDecoration(),
-          child: new FlareActor("assets/flare/new_bg_oapp.flr",
+          child: new FlareActor("assets/flare/el_bg.flr",
               fit: BoxFit.cover), // bg_oapp.flr
         ),
         SafeArea(
@@ -152,7 +152,7 @@ class _OMerchState extends State<OMerch> with SingleTickerProviderStateMixin {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Settings()),
+                        MaterialPageRoute(builder: (context) => Settings(), fullscreenDialog: true),
                       );
                     },
                   ),
@@ -195,7 +195,7 @@ class _OMerchState extends State<OMerch> with SingleTickerProviderStateMixin {
                   ),
                   Expanded(child: SizedBox()),
                   Text(
-                    'O-Merch.',
+                    'El-Merch.',
                     style: TextStyle(
                         color: AppColors.primaryText,
                         fontWeight: FontWeight.w800,
@@ -235,7 +235,7 @@ class _OMerchState extends State<OMerch> with SingleTickerProviderStateMixin {
                         errorBorder: InputBorder.none,
                         disabledBorder: InputBorder.none,
                         contentPadding: EdgeInsets.only(
-                            left: 15, bottom: 8, top: 8, right: 15),
+                            left: 15, bottom: 10, top: 10, right: 15),
                         labelStyle: TextStyle(
                             color: AppColors.primaryText,
                             fontWeight: FontWeight.w400,

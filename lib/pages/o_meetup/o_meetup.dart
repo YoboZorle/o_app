@@ -49,7 +49,7 @@ class _OMeetUpState extends State<OMeetUp> {
           new Container(
             decoration: new BoxDecoration(),
             child:
-            new FlareActor("assets/flare/new_bg_oapp.flr", fit: BoxFit.cover), // bg_oapp.flr
+            new FlareActor("assets/flare/el_bg.flr", fit: BoxFit.cover), // bg_oapp.flr
           ),
           SafeArea(
             child: Container(
@@ -925,7 +925,7 @@ class _OMeetUpState extends State<OMeetUp> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MenuWidget()),
+                  MaterialPageRoute(builder: (context) => MenuWidget(), fullscreenDialog: true),
                 );
               }),
             Container(
@@ -966,7 +966,7 @@ class _OMeetUpState extends State<OMeetUp> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              'O-MeetUp',
+              'El-MeetUp',
               style: TextStyle(
                   color: AppColors.primaryText,
                   fontWeight: FontWeight.w800,
