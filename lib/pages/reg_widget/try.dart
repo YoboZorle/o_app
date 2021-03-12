@@ -142,7 +142,7 @@ class _TryState extends State<Try> {
                           Container(
                               margin: EdgeInsets.symmetric(horizontal: 30),
                               child: btnBottom()),
-                          SizedBox(height: 15)
+                          SizedBox(height: 30)
                         ]),
                       ),
                     );

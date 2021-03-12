@@ -82,7 +82,7 @@ class _RegWidgetState extends State<RegWidget> with TickerProviderStateMixin {
                   letterSpacing: 1),
               children: <TextSpan>[
                 TextSpan(
-                  text: 'OSINBAJO',
+                  text: 'EL-RUFAI',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w900,

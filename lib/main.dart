@@ -74,7 +74,6 @@ class _SplashSscreenState extends State<SplashSscreen> {
 
   void navigationPage() {
     Navigator.pushReplacement(context,
-
         MaterialPageRoute(builder: (BuildContext context) => RegWidget()));
 //        PageRouteBuilder(
 //            transitionDuration: Duration(milliseconds: 900),
@@ -86,26 +85,22 @@ class _SplashSscreenState extends State<SplashSscreen> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Stack(
-        // fit: StackFit.expand,
         children: <Widget>[
           new Container(
             decoration: new BoxDecoration(),
-            child:
-                // new FlareActor("assets/flare/bg_oapp.flr", fit: BoxFit.fill),
-                new FlareActor("assets/flare/new_bg_oapp2.flr",
-                    fit: BoxFit.cover), // bg_oapp.flr
+            child: new FlareActor("assets/flare/el_bg.flr",
+                fit: BoxFit.cover), // bg_oapp.flr
           ),
           Center(
             child: new Container(
-                height: 300,
-                width: 300,
-                decoration: new BoxDecoration(),
-                child:
-                    // new FlareActor("assets/flare/bg_oapp.flr", fit: BoxFit.fill),
-                    new FlareActor("assets/flare/anim_try3.flr",
-                        animation: 'intro',
-                        fit: BoxFit.contain), // bg_oapp.flr
-              ),
+              height: 250,
+              width: 250,
+              decoration: new BoxDecoration(),
+              child:
+                  // new FlareActor("assets/flare/bg_oapp.flr", fit: BoxFit.fill),
+                  new FlareActor("assets/flare/anim_elrufai_splash.flr",
+                      animation: 'intro', fit: BoxFit.contain), // bg_oapp.flr
+            ),
           ),
         ],
       ),

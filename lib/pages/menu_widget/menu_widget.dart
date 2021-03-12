@@ -54,7 +54,6 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
     'assets/images/ig.png'
   ];
 
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -100,29 +99,30 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
 //              )),
               Container(
                   child: CarouselSlider(
-                    options: CarouselOptions(
-                      pauseAutoPlayOnTouch: true,
-                      scrollPhysics: BouncingScrollPhysics(),
-                      aspectRatio: 18/9,
-                      viewportFraction: 0.8,
-                      initialPage: 0,
-                      enableInfiniteScroll: true,
-                      reverse: false,
-                      autoPlay: true,
-                      autoPlayInterval: Duration(seconds: 5),
-                      autoPlayAnimationDuration: Duration(milliseconds: 1000),
-                      autoPlayCurve: Curves.fastOutSlowIn,
-                      enlargeCenterPage: true,
-                      scrollDirection: Axis.horizontal,
-                    ),
-                    items: imgList.map((item) => Container(
-                      child: Container(
-                          padding: const EdgeInsets.all(0.0),
-                          child: Image.asset(item, fit: BoxFit.cover, width: 1000)
-                      ),
-                    )).toList(),
-                  )
-              ),
+                options: CarouselOptions(
+                  pauseAutoPlayOnTouch: true,
+                  scrollPhysics: BouncingScrollPhysics(),
+                  aspectRatio: 18 / 9,
+                  viewportFraction: 0.8,
+                  initialPage: 0,
+                  enableInfiniteScroll: true,
+                  reverse: false,
+                  autoPlay: true,
+                  autoPlayInterval: Duration(seconds: 5),
+                  autoPlayAnimationDuration: Duration(milliseconds: 1000),
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enlargeCenterPage: true,
+                  scrollDirection: Axis.horizontal,
+                ),
+                items: imgList
+                    .map((item) => Container(
+                          child: Container(
+                              padding: const EdgeInsets.all(0.0),
+                              child: Image.asset(item,
+                                  fit: BoxFit.cover, width: 1000)),
+                        ))
+                    .toList(),
+              )),
               // youtube(),
               subtitle(),
               menu(),
@@ -400,7 +400,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                             Container(
                               margin: EdgeInsets.only(left: 25),
                               child: Text(
-                                "Move with Osinbajo",
+                                "Move with El-Rufai",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                   color: AppColors.primaryText,
