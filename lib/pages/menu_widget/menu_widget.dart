@@ -48,10 +48,9 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
       .toList();
 
   final List<String> imgList = [
-    'assets/images/tube.png',
-    'assets/images/web.png',
-    'assets/images/tweet.png',
-    'assets/images/ig.png'
+    'assets/images/tube.jpg',
+    'assets/images/web.jpg',
+    'assets/images/ig.jpg'
   ];
 
   @override
@@ -62,7 +61,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
         new Container(
           decoration: new BoxDecoration(),
           child:
-              new FlareActor("assets/flare/new_bg_oapp.flr", fit: BoxFit.cover),
+              new FlareActor("assets/flare/el_bg.flr", fit: BoxFit.cover),
         ),
         SafeArea(child: _body()),
       ],
