@@ -204,7 +204,7 @@ class _DigitalTownhallState extends State<DigitalTownhall>
             'Governor Nasir Ahmad El-Rufai Presides Over The Next Virtual Townhall Meeting To Discuss\n\"KDSG Security Update\"',
             style: TextStyle(
                 color: AppColors.primaryText,
-                fontWeight: FontWeight.w800,
+                fontWeight: FontWeight.w700,
                 fontFamily: 'Ubuntu',
                 letterSpacing: 0.2,
                 height: 1.3,
@@ -247,7 +247,8 @@ class _DigitalTownhallState extends State<DigitalTownhall>
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => TownHallLive()),
+              MaterialPageRoute(
+                  builder: (context) => TownHallLive(), fullscreenDialog: true),
             );
           },
         ),
