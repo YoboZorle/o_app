@@ -179,7 +179,7 @@ class _DigitalTownhallState extends State<DigitalTownhall>
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/townhall.png'),
+            image: AssetImage('assets/images/townhall.jpg'),
             fit: BoxFit.cover,
           ),
           shape: BoxShape.rectangle,
@@ -192,7 +192,7 @@ class _DigitalTownhallState extends State<DigitalTownhall>
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text('THU, 25 MAR at 09:00 AM',
+          Text('SAT, 20 MAR at 08:00 PM',
               style: TextStyle(
                   color: Colors.lightGreenAccent,
                   fontWeight: FontWeight.w800,
@@ -201,12 +201,13 @@ class _DigitalTownhallState extends State<DigitalTownhall>
                   fontSize: 14.5)),
           SizedBox(height: 6),
           Text(
-            'VP Osinbajo Prisides Over The Next Virtual Townhall Meeting To Discuss\n\"Encouraging Entreprenuership Amongst Nigerian Youths\"',
+            'Governor Nasir Ahmad El-Rufai Presides Over The Next Virtual Townhall Meeting To Discuss\n\"KDSG Security Update\"',
             style: TextStyle(
                 color: AppColors.primaryText,
                 fontWeight: FontWeight.w800,
                 fontFamily: 'Ubuntu',
                 letterSpacing: 0.2,
+                height: 1.3,
                 fontSize: 17),
           ),
           SizedBox(height: 15),

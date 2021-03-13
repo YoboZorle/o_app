@@ -44,7 +44,7 @@ class Assets {
   static const String imagesR2 = 'assets/images/r2.jpg';
   static const String imagesR3 = 'assets/images/r3.jpg';
   static const String imagesR4 = 'assets/images/r4.jpg';
-  static const String imagesTownhall = 'assets/images/townhall.png';
+  static const String imagesTownhall = 'assets/images/townhall.jpg';
   static const String imagesTube = 'assets/images/tube.jpg';
   static const String imagesTweet = 'assets/images/tweet.png';
   static const String imagesWeb = 'assets/images/web.jpg';
