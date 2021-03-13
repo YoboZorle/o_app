@@ -51,8 +51,8 @@ class _DigitalTownhallState extends State<DigitalTownhall>
       children: <Widget>[
         new Container(
           decoration: new BoxDecoration(),
-          child:
-          new FlareActor("assets/flare/new_bg_oapp.flr", fit: BoxFit.cover), // bg_oapp.flr
+          child: new FlareActor("assets/flare/el_bg.flr",
+              fit: BoxFit.cover), // bg_oapp.flr
         ),
         SafeArea(child: _body()),
       ],
@@ -90,27 +90,26 @@ class _DigitalTownhallState extends State<DigitalTownhall>
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             GestureDetector(
-              child: Stack(children: <Widget>[
-                Container(
-                  alignment: Alignment.topLeft,
-                  width: 50,
-                  child: new FlareActor("assets/flare/logo_oapp_small.flr",
-                      fit: BoxFit.contain),
-                ),
-                Positioned(
-                  top: 0,
-                  right: 0,
-                  child: SvgPicture.asset(_star, // Bright shade at the top
-                      height: 18,
-                      width: 18,
-                      color: _show ? Color(0xFFFFBB1F) : Colors.transparent,
-                      semanticsLabel: 'star notif icon'),
-                ),
-              ]),
-              onTap: (){
-                Navigator.pop(context);
-              }
-            ),
+                child: Stack(children: <Widget>[
+                  Container(
+                    alignment: Alignment.topLeft,
+                    width: 50,
+                    child: new FlareActor("assets/flare/logo_oapp_small.flr",
+                        fit: BoxFit.contain),
+                  ),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: SvgPicture.asset(_star, // Bright shade at the top
+                        height: 18,
+                        width: 18,
+                        color: _show ? Color(0xFFFFBB1F) : Colors.transparent,
+                        semanticsLabel: 'star notif icon'),
+                  ),
+                ]),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
             Container(
               padding: EdgeInsets.only(top: 5),
               child: Row(
@@ -134,16 +133,18 @@ class _DigitalTownhallState extends State<DigitalTownhall>
                       width: 30,
                       alignment: Alignment.centerRight,
                       child:
-                      SvgPicture.asset(_settings, // Bright shade at the top
-                          height: 22,
-                          width: 22,
-                          color: AppColors.primaryText,
-                          semanticsLabel: 'bg bottom image'),
+                          SvgPicture.asset(_settings, // Bright shade at the top
+                              height: 22,
+                              width: 22,
+                              color: AppColors.primaryText,
+                              semanticsLabel: 'bg bottom image'),
                     ),
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Settings()),
+                        MaterialPageRoute(
+                            builder: (context) => Settings(),
+                            fullscreenDialog: true),
                       );
                     },
                   ),
@@ -191,7 +192,7 @@ class _DigitalTownhallState extends State<DigitalTownhall>
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text('FRI, 28 AUG at 09:00 AM',
+          Text('THU, 25 MAR at 09:00 AM',
               style: TextStyle(
                   color: Colors.lightGreenAccent,
                   fontWeight: FontWeight.w800,
@@ -219,7 +220,7 @@ class _DigitalTownhallState extends State<DigitalTownhall>
           ),
           SizedBox(height: 15),
           Text(
-            'Join the VP for a LIVE discussion and also an opportunity to ask questions directly to the Vice President of the Federal Republic of Nigeria.\n',
+            'Join the LIVE discussion and also an opportunity to ask questions directly to the Governor of Kaduna State, Nigeria.\n',
             style: TextStyle(
                 color: AppColors.primaryText,
                 fontWeight: FontWeight.w500,
@@ -245,8 +246,7 @@ class _DigitalTownhallState extends State<DigitalTownhall>
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(
-                  builder: (context) => TownHallLive()),
+              MaterialPageRoute(builder: (context) => TownHallLive()),
             );
           },
         ),
