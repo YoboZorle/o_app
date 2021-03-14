@@ -15,7 +15,7 @@ class Assets {
   static const String flareLogoOappSmall = 'assets/flare/logo_oapp_small.flr';
   static const String flareOappLogoTry = 'assets/flare/oapp_logo_try.flr';
   static const String flareOappSplashAnim = 'assets/flare/oapp_splash_anim.flr';
-  static const String fontsUbuntuRegular = 'assets/fonts/Ubuntu-Regular.ttf';
+  static const String fontsUbuntu-Regular = 'assets/fonts/Ubuntu-Regular.ttf';
   static const String images1 = 'assets/images/1.png';
   static const String images2 = 'assets/images/2.png';
   static const String images3 = 'assets/images/3.png';
