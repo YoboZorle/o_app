@@ -41,37 +41,36 @@ class _DigitalAcState extends State<DigitalAc>
             decoration: new BoxDecoration(),
             child:
                 // new FlareActor("assets/flare/bg_oapp.flr", fit: BoxFit.fill),
-                new FlareActor("assets/flare/new_bg_oapp.flr",
+                new FlareActor("assets/flare/el_bg.flr",
                     fit: BoxFit.cover), // bg_oapp.flr
           ),
           SnappingSheet(
             sheetAbove: new Padding(
-                padding: EdgeInsets.only(bottom: 20.0),
-                child: Align(
-                  alignment: Alignment(0.90, 1.0),
-                  child: FloatingActionButton(
-                    backgroundColor: AppColors.bgUpperGreen,
-                    onPressed: () {
-                      if (_controller.snapPositions.last !=
-                          _controller.currentSnapPosition) {
-                        _controller
-                            .snapToPosition(_controller.snapPositions.last);
-                      } else {
-                        _controller
-                            .snapToPosition(_controller.snapPositions.first);
-                      }
-                    },
-                    child: RotationTransition(
-                      child: Icon(
-                        Icons.arrow_upward,
-                        color: AppColors.primaryText,
-                      ),
-                      turns: _arrowIconAnimation,
+              padding: EdgeInsets.only(bottom: 20.0),
+              child: Align(
+                alignment: Alignment(0.90, 1.0),
+                child: FloatingActionButton(
+                  backgroundColor: AppColors.bgUpperGreen,
+                  onPressed: () {
+                    if (_controller.snapPositions.last !=
+                        _controller.currentSnapPosition) {
+                      _controller
+                          .snapToPosition(_controller.snapPositions.last);
+                    } else {
+                      _controller
+                          .snapToPosition(_controller.snapPositions.first);
+                    }
+                  },
+                  child: RotationTransition(
+                    child: Icon(
+                      Icons.arrow_upward,
+                      color: AppColors.primaryText,
                     ),
+                    turns: _arrowIconAnimation,
                   ),
                 ),
               ),
-
+            ),
             onSnapEnd: () {
               if (_controller.snapPositions.last !=
                   _controller.currentSnapPosition) {
@@ -256,7 +255,7 @@ class _DigitalAcState extends State<DigitalAc>
             margin: EdgeInsets.symmetric(horizontal: 15),
             decoration: BoxDecoration(),
             child: Image.network(
-              'https://pbs.twimg.com/media/EHZU591WwAAyF63?format=jpg&name=large',
+              'https://pbs.twimg.com/media/EwOLwcDXIAc_jXr?format=jpg&name=medium',
               fit: BoxFit.cover,
             ),
           ),
@@ -346,11 +345,9 @@ class _DigitalAcState extends State<DigitalAc>
           Container(
             padding: new EdgeInsets.only(left: 15.0, right: 15, top: 5.0),
             child: ReadMoreText(
-              'There is nothing like the unadulterated joy that comes with interacting with children. I hope this flutters your heart as it did mine. Have a great week.\n'
-              '- -\n'
-              '#TheHat (how appropriate for this picture'
-              'Smiling face'
-              ') #TolaniAlli | #PYO',
+              'Thank you @elrufai\n'
+              'Thank you @suleiman_ay\n\n'
+              'The partnership between @contactkdsg + @bluecamelenergy works... and #KadunaUrbanRenewal is the now and the future.',
               style: TextStyle(
                   wordSpacing: 1.3,
                   color: Colors.white,
@@ -494,7 +491,7 @@ class _DigitalAcState extends State<DigitalAc>
             margin: EdgeInsets.symmetric(horizontal: 15),
             decoration: BoxDecoration(),
             child: Image.network(
-              'https://pbs.twimg.com/media/EeAwYoxXgAAeaa-?format=jpg&name=large',
+              'https://netstorage-legit.akamaized.net/images/5c8eb2febff6cda0.jpg?imwidth=900',
               fit: BoxFit.cover,
             ),
           ),
@@ -509,7 +506,7 @@ class _DigitalAcState extends State<DigitalAc>
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(
-                        'https://pbs.twimg.com/profile_images/1292457301543133185/p95CSX9c_400x400.jpg'),
+                        'https://pbs.twimg.com/profile_images/1052557821030612993/gOLVfqoN_400x400.jpg'),
                     fit: BoxFit.cover,
                   ),
                   shape: BoxShape.circle,
@@ -584,10 +581,9 @@ class _DigitalAcState extends State<DigitalAc>
           Container(
             padding: new EdgeInsets.only(left: 15.0, right: 15, top: 5.0),
             child: ReadMoreText(
-              'I’m really excited to read that @akin_adesina 😍 '
-              'has been given a clean bill of health, the trio panel  experts, '
-              'led by Robinson alongside Justice Hassan Jallow & the @WorldBank integrity '
-              'VP Leonard McCarthy, cleared him of all charges alleged by whistleblowers. Congrats Africa! 😃',
+              'Kaduna state governor, @elrufai\n'
+              'said his administration has employed measures to curb insecurity in the state.\n'
+              'The governor explained that the Kaduna state government has been supporting security agencies since 2015.\n',
               style: TextStyle(
                   wordSpacing: 1.3,
                   color: Colors.white,
@@ -751,7 +747,7 @@ class _DigitalAcState extends State<DigitalAc>
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(
-                        'https://pbs.twimg.com/profile_images/1269587105317097474/zZ2dqNJY_400x400.jpg'),
+                        'https://pbs.twimg.com/profile_images/1340088136878223360/zS27TL7e_400x400.jpg'),
                     fit: BoxFit.cover,
                   ),
                   shape: BoxShape.circle,
@@ -967,7 +963,7 @@ class _DigitalAcState extends State<DigitalAc>
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(
-                        'https://pbs.twimg.com/profile_images/1195361748741697537/0qaGTKCa_400x400.jpg'),
+                        'https://pbs.twimg.com/profile_images/530434347325603840/zYPOg9XK_400x400.jpeg'),
                     fit: BoxFit.cover,
                   ),
                   shape: BoxShape.circle,
@@ -1186,7 +1182,7 @@ class _DigitalAcState extends State<DigitalAc>
             margin: EdgeInsets.symmetric(horizontal: 15),
             decoration: BoxDecoration(),
             child: Image.network(
-              'https://pbs.twimg.com/media/EJ7B2doXkAEBn95?format=jpg&name=medium',
+              'https://www.expressiveinfo.com/wp-content/uploads/2020/02/Nasir-El-Rufai.jpeg',
               fit: BoxFit.cover,
             ),
           ),
@@ -2351,7 +2347,7 @@ class _DigitalAcState extends State<DigitalAc>
             margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
             decoration: BoxDecoration(),
             child: Image.network(
-              'https://ocdn.eu/pulscms-transforms/1/81wk9kpTURBXy80ZDM0OTdjYzhhOGJkMjA0YThjY2YzZDcxMWJhYWRmMi5qcGeRkwXNAxTNAbyBoTAF',
+              'https://cdn03.allafrica.com/download/pic/main/main/csiid/00471990:e1e573b2f129ab7aeba4a1027b20e9d5:arc614x376:w614:us1.jpg',
               fit: BoxFit.cover,
             ),
           ),
@@ -2404,7 +2400,7 @@ class _DigitalAcState extends State<DigitalAc>
                     Row(
                       children: <Widget>[
                         Text(
-                          'Published September 8, 2020',
+                          'Published March 13, 2021',
                           style: TextStyle(
                               fontFamily: 'Ubuntu',
                               fontWeight: FontWeight.w400,
@@ -2427,7 +2423,7 @@ class _DigitalAcState extends State<DigitalAc>
           Container(
             margin: EdgeInsets.only(left: 15, right: 15, top: 10),
             child: Text(
-              "UK judge explains how Osinbajo detected P&ID fraud against Nigeria",
+              "Troops foil attack by bandits on Turkish school in Kaduna",
               textAlign: TextAlign.left,
               style: TextStyle(
                 color: AppColors.primaryText,
@@ -2441,12 +2437,10 @@ class _DigitalAcState extends State<DigitalAc>
           Container(
             margin: EdgeInsets.only(left: 15, right: 15, top: 8),
             child: ReadMoreText(
-              'The vice president\'s intervention may have saved the day for Nigeria.'
-              '\nA United Kingdom judge says the timely observation and intervention of Vice President Yemi Osinbajo was instrumental in how the Process and Industrial Development Limited (P&ID) deal with Nigeria became known and identified as a fraudulent endeavour.'
-              '\n\nSir Ross Cranston of the UK High Court of Justice Queen’s Bench Division Commercial Court explained that the vice president was a regular fixture all through the review process.'
-              '\nCranston noted that Osinbajo\'s “fraud on the nation” statement in June of 2018 worked in Nigeria\'s favour.A brief overview of a deal gone wrong'
-              '\nOn January 11, 2010, British firm P&ID inked a gas supply and processing deal with the Ministry of Petroleum Resources on behalf of the Nigerian government.'
-              '\nP&ID was expected to build and operate an Accelerated Gas Development project in Adiabo in Odukpani Local Government Area of Cross River State, going by the provisions of the contract.',
+              'The Nigerian army says it foiled the attempt of bandits to abduct some students of Turkish International Secondary School in Kaduna.\n\n'
+              'The school is located at the Rigachikun axis of the state. \n'
+              'In a statement on Friday, Mohammed Yerima, army spokesperson, said the troops of the quick response force of division 1 were alerted to protect the school, following a tip-off of a planned attack by bandits.\n'
+              'Yerima noted that the troops responded to another distress call that bandits had had stormed the Federal School of Forestry Mechanisation, Afaka, Igabi LGA. ',
               trimLines: 4,
               colorClickableText: AppColors.primaryText,
               trimMode: TrimMode.Line,
@@ -2594,7 +2588,7 @@ class _DigitalAcState extends State<DigitalAc>
             margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
             decoration: BoxDecoration(),
             child: Image.network(
-              'https://www.yemiosinbajo.ng/wp-content/uploads/2020/08/Virtual-Townhall-of-Law-Students-Association-of-Nigeria-on-06082020-2.jpeg',
+              'https://pbs.twimg.com/media/EwN3B8DWEAA9ASh?format=jpg&name=large',
               fit: BoxFit.cover,
             ),
           ),
@@ -2608,7 +2602,7 @@ class _DigitalAcState extends State<DigitalAc>
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(
-                        'https://pbs.twimg.com/profile_images/1160567667574677505/VcYeM9xh_400x400.jpg'),
+                        'https://pbs.twimg.com/profile_images/898518670762266625/PW-GfGz7_400x400.jpg'),
                     fit: BoxFit.cover,
                   ),
                   shape: BoxShape.circle,
@@ -2625,7 +2619,7 @@ class _DigitalAcState extends State<DigitalAc>
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: "office_of_the_vp",
+                            text: "office_of_the_press",
                             style: TextStyle(
                               fontSize: 14,
                               color: AppColors.primaryText,
@@ -2647,7 +2641,7 @@ class _DigitalAcState extends State<DigitalAc>
                     Row(
                       children: <Widget>[
                         Text(
-                          'Published August 6, 2020',
+                          'Published March 11, 2021',
                           style: TextStyle(
                               fontFamily: 'Ubuntu',
                               fontWeight: FontWeight.w400,
@@ -2670,7 +2664,7 @@ class _DigitalAcState extends State<DigitalAc>
           Container(
             margin: EdgeInsets.only(left: 15, right: 15, top: 10),
             child: Text(
-              "VP’s Remarks At The Virtual Law Students Association Of Nigeria Townhall Meeting",
+              "Health is Wealth",
               textAlign: TextAlign.left,
               style: TextStyle(
                 color: AppColors.primaryText,
@@ -2684,13 +2678,7 @@ class _DigitalAcState extends State<DigitalAc>
           Container(
             margin: EdgeInsets.only(left: 15, right: 15, top: 8),
             child: ReadMoreText(
-              'OSINBAJO TO YOUNG NIGERIANS: REVERSE NEGATIVE IMPACT OF COVID-19 PANDEMIC THROUGH INNOVATIONS'
-              '\n*VP details FG’s economic response to pandemic at Law Students Townhall Meeting'
-              '\n*Adds: “Today’s lawyer must be multidisciplinary, multi-tasking, digitally strong men or women of affairs'
-              '\n\nThough the COVID-19 pandemic presents the most challenging times in recent history, it can also be a turning point for innovative thinking especially towards resolving the numerous challenges faced by humanity, according to Vice President Yemi Osinbajo, SAN.'
-              'Prof. Osinbajo stated this on Thursday at the virtual Townhall meeting of the Law Students Association of Nigeria (LAWSAN) themed “How to build the right mindset for a better Nigeria, post COVID-19”.'
-              '\nAccording to the Vice President, “We are faced with a two-fold global crisis. First is a health crisis and then there is an economic crisis and the combined effects have resulted in possibly the greatest socio-economic crisis in recent history.'
-              '\nContinuing Prof. Osinbajo noted “…at the moment, we are also at a turning point with new opportunities to turn under-consumption into thriving business models if only we effectively innovate. We are seeing some of this emerge already.”',
+              'Ongoing construction project of 300 Bed Specialists Teaching Hospital at Millennium city, Kaduna.\n\n#KadunaUrbanRenewal',
               trimLines: 4,
               colorClickableText: AppColors.primaryText,
               trimMode: TrimMode.Line,
@@ -2838,7 +2826,7 @@ class _DigitalAcState extends State<DigitalAc>
             margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
             decoration: BoxDecoration(),
             child: Image.network(
-              'https://businessday.ng/wp-content/uploads/2020/08/Yemi-Osinbajo.jpg',
+              'https://pbs.twimg.com/media/EwR_UVpWEAIOz54?format=jpg&name=medium',
               fit: BoxFit.cover,
             ),
           ),
@@ -2891,7 +2879,7 @@ class _DigitalAcState extends State<DigitalAc>
                     Row(
                       children: <Widget>[
                         Text(
-                          'Published 23th August, 2020 ',
+                          'Published 12 March, 2021 ',
                           style: TextStyle(
                               fontFamily: 'Ubuntu',
                               fontWeight: FontWeight.w400,
@@ -2914,7 +2902,7 @@ class _DigitalAcState extends State<DigitalAc>
           Container(
             margin: EdgeInsets.only(left: 15, right: 15, top: 10),
             child: Text(
-              "Allegations of withdrawal of N10billion from TSA made against His Excellency, Prof. Yemi Osinbajo, SAN, GCON.",
+              'KDSG Security Update: Friday 12th March 2021',
               textAlign: TextAlign.left,
               style: TextStyle(
                 color: AppColors.primaryText,
@@ -2928,7 +2916,7 @@ class _DigitalAcState extends State<DigitalAc>
           Container(
             margin: EdgeInsets.only(left: 15, right: 15, top: 8),
             child: ReadMoreText(
-              'That story failed to meet the editorial standards of BusinessDay Newspaper, as we have since discovered that the story was baseless, unfounded and unsupported by any factual substance.',
+              '180 rescued by troops of the Nigeria Army early today Friday, March 12. Several male+female students still missing following bandit attack at Federal College of Forestry Mechanization, Afaka-Igabi LG. Search & rescue efforts continue',
               trimLines: 4,
               colorClickableText: AppColors.primaryText,
               trimMode: TrimMode.Line,
@@ -3076,7 +3064,7 @@ class _DigitalAcState extends State<DigitalAc>
             margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
             decoration: BoxDecoration(),
             child: Image.network(
-              'https://www.yemiosinbajo.ng/wp-content/uploads/2020/08/Virtual-Townhall-of-Law-Students-Association-of-Nigeria-on-06082020-1.jpeg',
+              'https://pbs.twimg.com/media/EwO0JLvWYAEOJzx?format=jpg&name=medium',
               fit: BoxFit.cover,
             ),
           ),
@@ -3129,7 +3117,7 @@ class _DigitalAcState extends State<DigitalAc>
                     Row(
                       children: <Widget>[
                         Text(
-                          'Published 22th August, 2020 ',
+                          'Published 11 March, 2021 ',
                           style: TextStyle(
                               fontFamily: 'Ubuntu',
                               fontWeight: FontWeight.w400,
@@ -3152,31 +3140,13 @@ class _DigitalAcState extends State<DigitalAc>
           Container(
             margin: EdgeInsets.only(left: 15, right: 15, top: 10),
             child: Text(
-              "\"You must be intentional about understanding technology, information systems and artificial intelligence. This sort of radical versatility is the new normal, you can’t be a lawyer such as we were. You are in a completely new world.\" - VP Osinbajo",
+              'Afterward, Fellows appreciated Mr. Abdullahi and his team for the well-rounded discussion and wished them well in their endeavors.',
               textAlign: TextAlign.left,
               style: TextStyle(
                 color: AppColors.primaryText,
                 fontFamily: "Ubuntu",
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
-                letterSpacing: -0.28,
-              ),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 15, right: 15, top: 8),
-            child: ReadMoreText(
-              'Though the COVID-19 pandemic presents the most challenging times in recent history, it can also be a turning point for innovative thinking especially towards resolving the numerous challenges faced by humanity, according to Vice President Yemi Osinbajo, SAN.',
-              trimLines: 4,
-              colorClickableText: AppColors.primaryText,
-              trimMode: TrimMode.Line,
-              trimCollapsedText: '...read more',
-              trimExpandedText: ' show less',
-              style: TextStyle(
-                color: Colors.white,
-                fontFamily: "Ubuntu",
-                fontWeight: FontWeight.w400,
-                fontSize: 14.5,
                 letterSpacing: -0.28,
               ),
             ),
