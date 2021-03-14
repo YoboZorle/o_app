@@ -8,6 +8,8 @@ import 'package:oapp/pages/settings/settings.dart';
 import 'package:oapp/values/values.dart';
 import 'package:readmore/readmore.dart';
 
+// https://pbs.twimg.com/media/Ev5Ijr4XcAAp81K?format=jpg&name=medium
+
 class MoveWithOs extends StatefulWidget {
   @override
   _MoveWithOsState createState() => new _MoveWithOsState();
@@ -48,7 +50,7 @@ class _MoveWithOsState extends State<MoveWithOs> {
         children: <Widget>[
           new Container(
             decoration: new BoxDecoration(),
-            child: new FlareActor("assets/flare/new_bg_oapp.flr",
+            child: new FlareActor("assets/flare/el_bg.flr",
                 fit: BoxFit.cover), // bg_oapp.flr
           ),
           SafeArea(
@@ -82,13 +84,13 @@ class _MoveWithOsState extends State<MoveWithOs> {
                                       top: Radius.circular(25.0)),
                                   image: DecorationImage(
                                     image: NetworkImage(
-                                        'https://pbs.twimg.com/media/Eg6m__UWsAY5Ahn?format=jpg&name=large'),
+                                      'https://pbs.twimg.com/media/EBMZaGPXkAE8Uxd.jpg'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
                               ReadMoreText(
-                                'I am pleased that Simbo has taken the trouble to detail his thoughts and put them out for debate and analysis especially at a time when critical thinking on public affairs is narrowing.',
+                              'As elected CEO of KDSG, I take ultimate responsibility for every policy, action, even errors! That is why we do not always explain some of the nuances of state governance like the sharing of responsibilities, etc. Commentators must do better than tweet false, injurious ignorance!',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w400,
@@ -155,13 +157,13 @@ class _MoveWithOsState extends State<MoveWithOs> {
                                       top: Radius.circular(25.0)),
                                   image: DecorationImage(
                                     image: NetworkImage(
-                                        'https://pbs.twimg.com/media/Eg6m9bZX0AgN7m_?format=jpg&name=small'),
+                                        'https://i1.wp.com/naijabiography.com/wp-content/uploads/2020/09/118685787_2648547395362897_2798202860286714231_n.jpg?fit=453%2C301&ssl=1'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
                               ReadMoreText(
-                                'Some have argued that one of the challenges we have faced as a nation is the reluctance of our best minds to get involved in politics. Simbo argues that we must approach this at retail level and not with wholesale mentality.',
+                              'When you pick people that has never achieved anything in their lives in senior government positions, they will do anything to remain there. - Nasir Ahmad el-Rufai',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w400,
@@ -228,13 +230,13 @@ class _MoveWithOsState extends State<MoveWithOs> {
                                       top: Radius.circular(25.0)),
                                   image: DecorationImage(
                                     image: NetworkImage(
-                                        'https://pbs.twimg.com/media/EfpgiM-WkAY0Nyc?format=jpg&name=medium'),
+                                        'https://pbs.twimg.com/media/EuX-mhAXcAwIaii?format=jpg&name=large'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
                               ReadMoreText(
-                                'Vision is important but so is memory. History is far too essential for us to de-prioritize. When the Federal Government decided to re-introduce history into the curriculum across schools, it was a decision to have our children understand the life that preceded them.',
+                               'When you do nothing and allow problems to escalate, you are not a leader. You are a joke - Nasir Ahmad el-Rufai',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w400,
@@ -302,13 +304,13 @@ class _MoveWithOsState extends State<MoveWithOs> {
                                       top: Radius.circular(25.0)),
                                   image: DecorationImage(
                                     image: NetworkImage(
-                                        'https://pbs.twimg.com/media/Ee-XByFXgAAyJ60?format=jpg&name=medium'),
+                                        'https://pbs.twimg.com/media/EuU3JhlXMAApYYN?format=jpg&name=large'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
                               ReadMoreText(
-                                'There is need for an urgent, honest and frank conversation about judicial reforms especially, the selection and appointment of judges in Nigeria, given the significant roles judges play in the polity, social justice and democracy itself.',
+                               'If our elite have chosen not to go into politics to set the tune, the bad ones will take over. - Nasir Ahmad el-Rufai ',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w400,
@@ -375,13 +377,13 @@ class _MoveWithOsState extends State<MoveWithOs> {
                                       top: Radius.circular(25.0)),
                                   image: DecorationImage(
                                     image: NetworkImage(
-                                        'https://pbs.twimg.com/media/Ec6rS90X0AEENaa?format=jpg&name=medium'),
+                                        'https://pbs.twimg.com/media/EuW3FrSXAAANJu9?format=jpg&name=medium'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
                               ReadMoreText(
-                                'Our experience here in Nigeria is that that anonymous corporate ownership covers a multitude of sins including conflict of interest, corruption, tax evasion and even terrorism financing. \nNigeria is in the process of amending its law to mandate disclosure of beneficial interests.',
+                               'We need democracy and openness in governance in Africa. - Nasir Ahmad el-Rufai',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w400,
@@ -527,7 +529,7 @@ class _MoveWithOsState extends State<MoveWithOs> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              'Move With Osinbajo',
+              'Move With El-Rufai',
               style: TextStyle(
                   color: AppColors.primaryText,
                   fontWeight: FontWeight.w800,
