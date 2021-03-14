@@ -43,8 +43,8 @@ class _TheManState extends State<TheMan> {
         children: <Widget>[
           new Container(
             decoration: new BoxDecoration(),
-            child:
-            new FlareActor("assets/flare/new_bg_oapp.flr", fit: BoxFit.cover), // bg_oapp.flr
+            child: new FlareActor("assets/flare/el_bg.flr",
+                fit: BoxFit.cover), // bg_oapp.flr
           ),
           SafeArea(
             child: CustomScrollView(
@@ -56,9 +56,7 @@ class _TheManState extends State<TheMan> {
 //            ),
 
                 SliverToBoxAdapter(
-                  child: Column(children: <Widget>[
-                    header(),
-                  title()]),
+                  child: Column(children: <Widget>[header(), title()]),
                 ),
                 GalleryStaggeredGridView(),
 
@@ -123,11 +121,11 @@ class _TheManState extends State<TheMan> {
                       width: 30,
                       alignment: Alignment.centerRight,
                       child:
-                      SvgPicture.asset(_settings, // Bright shade at the top
-                          height: 22,
-                          width: 22,
-                          color: AppColors.primaryText,
-                          semanticsLabel: 'bg bottom image'),
+                          SvgPicture.asset(_settings, // Bright shade at the top
+                              height: 22,
+                              width: 22,
+                              color: AppColors.primaryText,
+                              semanticsLabel: 'bg bottom image'),
                     ),
                     onTap: () {
                       Navigator.push(
@@ -144,23 +142,23 @@ class _TheManState extends State<TheMan> {
       );
 
   title() => Container(
-    width: MediaQuery.of(context).size.width,
-    alignment: Alignment.centerLeft,
-    margin: EdgeInsets.only(top: 20, bottom: 15, left: 15),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          'The Man. The People. The Journey',
-          style: TextStyle(
-              color: AppColors.primaryText,
-              fontWeight: FontWeight.w800,
-              fontFamily: 'Ubuntu',
-              fontSize: 20),
+        width: MediaQuery.of(context).size.width,
+        alignment: Alignment.centerLeft,
+        margin: EdgeInsets.only(top: 20, bottom: 15, left: 15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'The Man. The People. The Journey',
+              style: TextStyle(
+                  color: AppColors.primaryText,
+                  fontWeight: FontWeight.w800,
+                  fontFamily: 'Ubuntu',
+                  fontSize: 20),
+            ),
+          ],
         ),
-      ],
-    ),
-  );
+      );
 }
 
 class GalleryStaggeredGridView extends StatelessWidget {
@@ -168,30 +166,22 @@ class GalleryStaggeredGridView extends StatelessWidget {
   int videoIndex = 1;
   List<int> videosIndex = [];
   List<String> images = [
-    'https://pbs.twimg.com/media/Ec8yzmGXkAAhEwF?format=jpg&name=medium',
-    'https://pbs.twimg.com/media/Ec8yyqjX0AAOS3e?format=jpg&name=medium',
-    'https://www.hopefornigeriaonline.com/wp-content/uploads/2018/03/4Osinbajo%E2%80%99s-daughter%E2%80%99s-traditional-wedding.jpg',
-    'https://pbs.twimg.com/media/ESa75QPX0AEwehO?format=jpg&name=medium',
-    'https://pbs.twimg.com/media/EPT9MUHWkAENG7L?format=jpg&name=medium',
-    'https://i0.wp.com/www.chronicle.ng/wp-content/uploads/2020/05/A-baby-boy-shares-a-moment-with-Vice-President-Yemi-Osinbajo.jpeg?fit=612%2C408&ssl=1',
-    'https://pbs.twimg.com/media/EL__g_eWwAEubnj?format=jpg&name=medium',
-    'https://pbs.twimg.com/media/EL-YCeLXkAEVY1u?format=jpg&name=medium',
-    'https://i1.wp.com/www.icirnigeria.org/wp-content/uploads/2018/12/Dogara-tackles-Buhari-says-FGs-Trader-Moni-is-a-form-of-voter-inducement-e1544519171448.jpg?resize=730%2C430&ssl=1',
-    'https://pbs.twimg.com/media/EJt-IfkXkAIFYn6?format=jpg&name=medium',
-    'https://www.africanweddingsng.com/wp-content/uploads/2018/03/29386552_2047340572174584_7981367448640600467_n.jpg',
-    'https://pbs.twimg.com/media/EJVisbrXkAIVMyF?format=jpg&name=medium',
-    'https://i1.wp.com/cdn.vanguardngr.com/wp-content/uploads/2019/02/Osinbajo-kogi-6.jpg?resize=600%2C420&ssl=1',
-    'https://pbs.twimg.com/media/EJB1oJKX0AYAt3N?format=jpg&name=medium',
-    'https://www.newsheadlines.com.ng/wp-content/uploads/2019/12/Buhari-sends-belated-birthday-wishes-to-Maryam-Uwais.jpg',
-    'https://pbs.twimg.com/media/EDASbX7WkAIyKFg?format=jpg&name=medium',
-    'https://pbs.twimg.com/media/D7vO2YqXsAA0IE1?format=jpg&name=medium',
-    'https://pbs.twimg.com/media/D7LrM9AXsAEgjcV?format=jpg&name=900x900',
-    'https://pbs.twimg.com/media/EgyeUm3WsAAbMPS?format=jpg&name=large',
-    'https://pbs.twimg.com/media/D5_QXhRXkAAMQI2?format=jpg&name=medium',
-    'https://thenewsguru.com/wp-content/uploads/2020/07/Kiki-Osinbajo.jpg',
-    'https://netstorage-legit.akamaized.net/images/vllkyt2eoqvh8c0hgg.jpg?imwidth=1200&impolicy=default-amp',
-    'https://storage.googleapis.com/thisday-846548948316-wp-data/wp-media/2019/11/798e0eb1-dolly-and-yemi-osinbajo.jpg',
-    'https://pbs.twimg.com/media/D1CM6y1WsAEAnfu?format=jpg&name=medium',
+    'https://lh3.googleusercontent.com/proxy/cj_hiLwUVg3k9pTCBLUhvcZfEAbpWKolGZuPHpbn2FxH4yIyac6SdZBJ_RhJRcMxXADVqyXgHY79g4lGybQD2qvTqhbRFl78MOdlDTQwZvyv29mL',
+    'https://i.ytimg.com/vi/erAc_X2Bhl4/maxresdefault.jpg',
+'https://guardian.ng/wp-content/uploads/2019/08/Nasir-el-Rufai-and-wife-Aisha.jpg',
+    'https://i1.wp.com/dailynigerian.com/wp-content/uploads/2018/09/Nasir-Elrufai-El-Rufai.jpg',
+    'https://pbs.twimg.com/media/EZ1Jpo1XkAE6nrm.jpg',
+    'https://www.icirnigeria.org/wp-content/uploads/2018/05/Kaduna-State-Governor-Nasir-El-Rufai-with-President-Muhammadu-Buhari-at-Rigasa-train-station-in-Kaduna.jpg',
+'https://pbs.twimg.com/media/D3OhRR9WkAAEYy7.jpg',
+    'https://www.vanguardngr.com/wp-content/uploads/2020/04/EWPqJ_VWAAEEXY_.jpg',
+    'https://www.channelstv.com/wp-content/uploads/2018/02/El-Rufai-Dalung8.jpg',
+    'https://pbs.twimg.com/media/DwbDvdCX4AATjH_.jpg',
+    'https://pbs.twimg.com/media/DrUqtsGWoAAJpmv.jpg',
+'https://p.scooper.news/v2-EagleNews/Eagle-NewsImage/detail/20201224/e472c986e3707272b5fdab4863d0991c.webp',
+    'https://2.bp.blogspot.com/-lHAgRwQvECU/W1gPRWgVYXI/AAAAAAAACy0/q-ZrOnv1R3YaQoHKMFzdgZy28dTLIzIDACLcBGAs/s1600/Governor-el-rufai-with-son.jpg',
+'https://pbs.twimg.com/media/Dtk8icWXQAAgw9g.jpg',
+    'https://pbs.twimg.com/media/D-EoOEQWwAAbBUD.jpg',
+    'https://www.expressiveinfo.com/wp-content/uploads/2020/02/Nasir-El-Rufai.jpeg',
   ];
 
   GalleryStaggeredGridView() {
