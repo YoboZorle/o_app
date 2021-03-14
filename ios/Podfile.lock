@@ -1,4 +1,6 @@
 PODS:
+  - audio_manager (0.0.1):
+    - Flutter
   - camera (0.0.1):
     - Flutter
   - Flutter (1.0.0)
@@ -12,6 +14,7 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - audio_manager (from `.symlinks/plugins/audio_manager/ios`)
   - camera (from `.symlinks/plugins/camera/ios`)
   - Flutter (from `Flutter`)
   - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
@@ -20,6 +23,8 @@ DEPENDENCIES:
   - video_player (from `.symlinks/plugins/video_player/ios`)
 
 EXTERNAL SOURCES:
+  audio_manager:
+    :path: ".symlinks/plugins/audio_manager/ios"
   camera:
     :path: ".symlinks/plugins/camera/ios"
   Flutter:
@@ -34,6 +39,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/video_player/ios"
 
 SPEC CHECKSUMS:
+  audio_manager: 59466b2ea5552ebdcba8106796f09b9357ef12e0
   camera: a0ca5080336f7af47b88436e5e26da3dee5568f0
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   flutter_inappwebview: 69dfbac46157b336ffbec19ca6dfd4638c7bf189

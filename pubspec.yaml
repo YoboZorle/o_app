@@ -49,6 +49,7 @@ dependencies:
   camera: ^0.5.7
   path_provider:
   path:
+  audio_manager: ^0.7.3
 
 dev_dependencies:
   flutter_test:
