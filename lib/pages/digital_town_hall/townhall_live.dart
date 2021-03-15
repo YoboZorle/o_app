@@ -4,6 +4,7 @@ import 'package:oapp/values/values.dart';
 import 'package:video_player/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:video_viewer/video_viewer.dart';
 
 class TownHallLive extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class TownHallLive extends StatefulWidget {
 }
 
 class _TownHallLiveState extends State<TownHallLive> {
-  VideoPlayerController _controller;
+  VideoViewerController _controller;
 
   bool _show = true;
   Timer _timer;
@@ -24,18 +25,21 @@ class _TownHallLiveState extends State<TownHallLive> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('assets/videos/live.mp4')
-      ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-        setState(() {});
-        _controller.setLooping(true);
-        _controller.play();
-      });
+    // _controller = VideoPlayerController.asset('assets/videos/live.mp4')
+    // _controller = VideoPlayerController.network(
+    //     'https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_20mb.mp4')
+    //   ..initialize().then((_) {
+    //     // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+    //     setState(() {});
+    //     _controller.setLooping(true);
+    //     _controller.play();
+    //   });
+
+    _controller = VideoViewerController();
     _timer = Timer.periodic(Duration(milliseconds: 700), (_) {
       setState(() => _show = !_show);
     });
   }
-// make nigeria great again - making the nigeria of our dreams
 
 //  @override
 //  Widget build(BuildContext context) {
@@ -74,29 +78,34 @@ class _TownHallLiveState extends State<TownHallLive> {
         // Adjusted theme colors to match logo.
         primaryColor: Color(0xffb55e28),
         accentColor: Color(0xffffd544),
+        brightness: Brightness.dark,
       ),
       home: Scaffold(
-        // TODO 6: Create a Stack Widget
         body: SafeArea(
+          top: false,
           child: Stack(
             children: <Widget>[
-              // TODO 7: Add a SizedBox to contain our video.
               SizedBox.expand(
                 child: FittedBox(
-                  // If your background video doesn't look right, try changing the BoxFit property.
-                  // BoxFit.fill created the look I was going for.
                   fit: BoxFit.cover,
                   child: SizedBox(
-                    width: _controller.value.size?.width ?? 0,
-                    height: _controller.value.size?.height ?? 0,
-//                  width: MediaQuery.of(context).size.width,
-//                    height: MediaQuery.of(context).size.height,
-                    child: VideoPlayer(_controller),
-                  ),
+                      width: MediaQuery.of(context).size.width,
+                      child: VideoViewer(
+                        autoPlay: true,
+                        looping: true,
+                        defaultAspectRatio: 1,
+                        onFullscreenFixLandscape: true,
+                        source: {
+                          "SubRip Caption": VideoSource(
+                            video: VideoPlayerController.asset(
+                                "assets/videos/live.mp4"),
+                          )
+                        },
+                      )),
                 ),
               ),
               Positioned(
-                  top: 15,
+                  top: 80,
                   left: 15,
                   child: Container(
                     height: 18,
@@ -111,7 +120,7 @@ class _TownHallLiveState extends State<TownHallLive> {
                             fontSize: 13)),
                   )),
               Positioned(
-                  top: 10,
+                  top: 60,
                   right: 5,
                   child: IconButton(
                     icon: Icon(

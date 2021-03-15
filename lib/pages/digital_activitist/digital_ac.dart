@@ -133,8 +133,8 @@ class _DigitalAcState extends State<DigitalAc>
                                 //     EdgeInsets.only(left: 15, right: 15),
                                 labelStyle: TextStyle(
                                     fontFamily: 'Ubuntu',
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w600,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500,
                                     letterSpacing: 0.5,
                                     color: AppColors.primaryText),
                                 unselectedLabelColor: Colors.grey[400],
@@ -295,7 +295,6 @@ class _DigitalAcState extends State<DigitalAc>
                     'https://pbs.twimg.com/media/EwOLwcDXIAc_jXr?format=jpg&name=medium',
                   )),
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.redAccent,
             ),
           ),
           SizedBox(height: 10),
@@ -535,10 +534,8 @@ class _DigitalAcState extends State<DigitalAc>
                     'https://netstorage-legit.akamaized.net/images/5c8eb2febff6cda0.jpg?imwidth=900',
                   )),
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.redAccent,
             ),
           ),
-
 
           SizedBox(height: 10),
           Row(
@@ -984,7 +981,6 @@ class _DigitalAcState extends State<DigitalAc>
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-
           Container(
             constraints: BoxConstraints(
               maxHeight: 170.0, // changed to 400
@@ -997,10 +993,9 @@ class _DigitalAcState extends State<DigitalAc>
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(
-                      'https://pbs.twimg.com/media/EJa_nXXXsAAYA2k?format=jpg&name=medium',
+                    'https://pbs.twimg.com/media/EJa_nXXXsAAYA2k?format=jpg&name=medium',
                   )),
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.redAccent,
             ),
           ),
           SizedBox(height: 10),
@@ -1238,7 +1233,6 @@ class _DigitalAcState extends State<DigitalAc>
                     'https://www.expressiveinfo.com/wp-content/uploads/2020/02/Nasir-El-Rufai.jpeg',
                   )),
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.redAccent,
             ),
           ),
           SizedBox(height: 10),
@@ -1476,7 +1470,6 @@ class _DigitalAcState extends State<DigitalAc>
                     'https://pbs.twimg.com/media/EgrTzByXcAAZ6w-?format=jpg&name=medium',
                   )),
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.redAccent,
             ),
           ),
           SizedBox(height: 10),
@@ -1936,7 +1929,6 @@ class _DigitalAcState extends State<DigitalAc>
                     'https://pbs.twimg.com/media/EeZvdCcXYAAJgrw?format=jpg&name=medium',
                   )),
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.redAccent,
             ),
           ),
           SizedBox(height: 10),
@@ -2414,7 +2406,6 @@ class _DigitalAcState extends State<DigitalAc>
                   image: NetworkImage(
                       'https://cdn03.allafrica.com/download/pic/main/main/csiid/00471990:e1e573b2f129ab7aeba4a1027b20e9d5:arc614x376:w614:us1.jpg')),
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.redAccent,
             ),
           ),
           Row(
@@ -2656,10 +2647,9 @@ class _DigitalAcState extends State<DigitalAc>
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(
-                'https://pbs.twimg.com/media/EwN3B8DWEAA9ASh?format=jpg&name=large',
+                    'https://pbs.twimg.com/media/EwN3B8DWEAA9ASh?format=jpg&name=large',
                   )),
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.redAccent,
             ),
           ),
           Row(
@@ -2886,7 +2876,6 @@ class _DigitalAcState extends State<DigitalAc>
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-
           Container(
             constraints: BoxConstraints(
               maxHeight: 160.0, // changed to 400
@@ -2902,7 +2891,6 @@ class _DigitalAcState extends State<DigitalAc>
                     'https://pbs.twimg.com/media/EwR_UVpWEAIOz54?format=jpg&name=medium',
                   )),
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.redAccent,
             ),
           ),
           Row(
@@ -3129,7 +3117,6 @@ class _DigitalAcState extends State<DigitalAc>
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-
           Container(
             constraints: BoxConstraints(
               maxHeight: 160.0, // changed to 400
@@ -3145,10 +3132,8 @@ class _DigitalAcState extends State<DigitalAc>
                     'https://pbs.twimg.com/media/EwO0JLvWYAEOJzx?format=jpg&name=medium',
                   )),
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              color: Colors.redAccent,
             ),
           ),
-
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
