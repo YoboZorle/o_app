@@ -35,14 +35,14 @@ class _PodcastState extends State<Podcast> {
 
   final list = [
     {
-      "title": "Assets",
-      "desc": "assets playback",
-      "url": "assets/xv.mp3",
-      "coverUrl": "assets/ic_launcher.png"
+      "title": "The KDSG Weekly",
+      "desc": "El-Rufai Speaks On Insecurity on The Podcast",
+      "url": "assets/flutter_assets/audio/audio_one.mp3",
+      "coverUrl": "https://www.africanstudies.ox.ac.uk/sites/default/files/africanstudies/images/media/mallam_nasir_el-rufai_governor_of_kaduna_state_nigeria.jpg"
     },
     {
-      "title": "network",
-      "desc": "network resouce playback",
+      "title": "Naija Hits FM on The Podcast",
+      "desc": "Network playback for the best of Nigeria.",
       "url": "https://dl.espressif.com/dl/audio/ff-16b-2c-44100hz.m4a",
       "coverUrl": "https://homepages.cae.wisc.edu/~ece533/images/airplane.png"
     }
@@ -137,17 +137,17 @@ class _PodcastState extends State<Podcast> {
 
   void loadFile() async {
     // read bundle file to local path
-    final audioFile = await rootBundle.load("assets/aLIEz.m4a");
+    final audioFile = await rootBundle.load("assets/flutter_assets/audio/audio_one.mp3");
     final audio = audioFile.buffer.asUint8List();
 
     final appDocDir = await getApplicationDocumentsDirectory();
     print(appDocDir);
 
-    final file = File("${appDocDir.path}/aLIEz.m4a");
+    final file = File("${appDocDir.path}/audio_one.mp3");
     file.writeAsBytesSync(audio);
 
     AudioInfo info = AudioInfo("file://${file.path}",
-        title: "file", desc: "local file", coverUrl: "assets/aLIEz.jpg");
+        title: "Nasir El Rufai Voice To The Youths", desc: "The show that connects over 200,000 Kaduna youths.", coverUrl: "https://www.arise.tv/batman/2020/11/Nasir-El-Rufai.jpg");
 
     list.add(info.toJson());
     AudioManager.instance.audioList.add(info);
@@ -206,10 +206,15 @@ class _PodcastState extends State<Podcast> {
                             ),
                             title: Text(list[index]["title"],
                                 style: TextStyle(
-                                    fontSize: 17,
+                                    fontSize: 15,
                                     color: Colors.white,
+                                    fontWeight: FontWeight.w600,
                                     fontFamily: 'Ubuntu')),
-                            subtitle: Text(list[index]["desc"]),
+                            subtitle: Text(list[index]["desc"],  style: TextStyle(
+                                fontSize: 13,
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'Ubuntu')),
                             onTap: () =>
                                 AudioManager.instance.play(index: index),
                           );

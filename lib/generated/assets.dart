@@ -6,6 +6,7 @@ class Assets {
   static const String assetsImagesIg = 'assets/images/ig.png';
   static const String assetsImagesTube = 'assets/images/tube.png';
   static const String assetsImagesWeb = 'assets/images/web.png';
+  static const String audioAudioOne = 'assets/flutter_assets/audio/audio_one.mp3';
   static const String flareAnimElrufaiSplash = 'assets/flare/anim_elrufai_splash.flr';
   static const String flareBgOapp = 'assets/flare/bg_oapp.flr';
   static const String flareElBg = 'assets/flare/el_bg.flr';
@@ -15,7 +16,7 @@ class Assets {
   static const String flareLogoOappSmall = 'assets/flare/logo_oapp_small.flr';
   static const String flareOappLogoTry = 'assets/flare/oapp_logo_try.flr';
   static const String flareOappSplashAnim = 'assets/flare/oapp_splash_anim.flr';
-  static const String fontsUbuntu-Regular = 'assets/fonts/Ubuntu-Regular.ttf';
+  static const String fontsUbuntuRegular = 'assets/fonts/Ubuntu-Regular.ttf';
   static const String images1 = 'assets/images/1.png';
   static const String images2 = 'assets/images/2.png';
   static const String images3 = 'assets/images/3.png';
