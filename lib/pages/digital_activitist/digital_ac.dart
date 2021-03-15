@@ -141,8 +141,9 @@ class _DigitalAcState extends State<DigitalAc>
                                 indicatorWeight: 1.5,
                                 unselectedLabelColor: Colors.grey[400],
                                 tabs: [
-                                  Tab(text: "Community Feeds"),
                                   Tab(text: "What to Know Today"),
+                                  Tab(text: "Community Feeds"),
+
                                 ],
                               ),
                             ),
@@ -153,21 +154,7 @@ class _DigitalAcState extends State<DigitalAc>
                     body: TabBarView(
                       physics: NeverScrollableScrollPhysics(),
                       children: <Widget>[
-                        Container(
-                          // color: Colors.red.withOpacity(0.2),
-                          child: new ListView(
-                              physics: BouncingScrollPhysics(),
-                              children: <Widget>[
-                                postA(),
-                                postOne(),
-                                post1(),
-                                postB(),
-                                postTwo(),
-                                postC(),
-                                postThree(),
-                                postFour(),
-                              ]),
-                        ),
+
                         Container(
                           // color: Colors.red.withOpacity(0.2),
                           child: new ListView(
@@ -181,6 +168,21 @@ class _DigitalAcState extends State<DigitalAc>
                                     newsThree(),
                                   ],
                                 ),
+                              ]),
+                        ),
+                        Container(
+                          // color: Colors.red.withOpacity(0.2),
+                          child: new ListView(
+                              physics: BouncingScrollPhysics(),
+                              children: <Widget>[
+                                postA(),
+                                postOne(),
+                                post1(),
+                                postB(),
+                                postTwo(),
+                                postC(),
+                                postThree(),
+                                postFour(),
                               ]),
                         ),
                       ],

@@ -79,9 +79,11 @@ class _OMerchState extends State<OMerch> with SingleTickerProviderStateMixin {
             children: <Widget>[
               header(),
               title(),
-              stocks(),
+              // stocks(),
 //              banner(),
 //              subtitle(),
+            Container(height: 350, width: 200,
+            child: Center(child: Text('Cart empty', style: TextStyle(color: Colors.white),))),
               inviteBtn(),
               Container(
                 height: 100,
