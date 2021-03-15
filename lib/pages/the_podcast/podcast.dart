@@ -1,9 +1,13 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:audio_manager/audio_manager.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:oapp/pages/settings/settings.dart';
+import 'package:oapp/values/colors.dart';
 import 'package:path_provider/path_provider.dart';
 
 class Podcast extends StatefulWidget {
@@ -21,6 +25,13 @@ class _PodcastState extends State<Podcast> {
   String _error;
   num curIndex = 0;
   PlayMode playMode = AudioManager.instance.playMode;
+
+  final String _search = 'assets/svg/search.svg';
+  final String _settings = 'assets/svg/settings.svg';
+  final String _star = 'assets/svg/star.svg';
+
+  bool _show = true;
+  Timer _timer;
 
   final list = [
     {
@@ -41,6 +52,10 @@ class _PodcastState extends State<Podcast> {
   void initState() {
     super.initState();
 
+    _timer = Timer.periodic(Duration(milliseconds: 700), (_) {
+      setState(() => _show = !_show);
+    });
+
     initPlatformState();
     setupAudio();
     loadFile();
@@ -50,6 +65,7 @@ class _PodcastState extends State<Podcast> {
   void dispose() {
     // 释放所有资源
     AudioManager.instance.release();
+    _timer?.cancel();
     super.dispose();
   }
 
@@ -156,38 +172,75 @@ class _PodcastState extends State<Podcast> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin audio player'),
-        ),
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              Text('Running on: $_platformVersion\n'),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16),
-                child: volumeFrame(),
+        body: Stack(
+          children: <Widget>[
+            new Container(
+              decoration: new BoxDecoration(),
+              child: new FlareActor("assets/flare/el_bg.flr",
+                  fit: BoxFit.cover), // bg_oapp.flr
+            ),
+            SafeArea(
+              child: Column(
+                children: [
+                  // Text('Running on: $_platformVersion\n'),
+                  header(), title(),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: volumeFrame(),
+                  ),
+                  Expanded(
+                    child: ListView.separated(
+                        physics: BouncingScrollPhysics(),
+                        itemBuilder: (context, index) {
+                          return ListTile(
+                            leading: Container(
+                              height: 45,
+                              width: 45,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(list[index]["coverUrl"]),
+                                  fit: BoxFit.cover,
+                                ),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                            title: Text(list[index]["title"],
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.white,
+                                    fontFamily: 'Ubuntu')),
+                            subtitle: Text(list[index]["desc"]),
+                            onTap: () =>
+                                AudioManager.instance.play(index: index),
+                          );
+                        },
+                        separatorBuilder: (BuildContext context, int index) =>
+                            Divider(
+                                color: AppColors.primaryText.withOpacity(0.0),
+                                height: 0.4),
+                        itemCount: list.length),
+                  ),
+                  Center(
+                      child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 15, vertical: 3),
+                    alignment: Alignment.center,
+                    child: Text(
+                      _error != null
+                          ? _error
+                          : "${AudioManager.instance.info.title} lrc text: $_position",
+                      maxLines: 1,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Ubuntu',
+                          fontSize: 13,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  )),
+                  bottomPanel(),
+                ],
               ),
-              Expanded(
-                child: ListView.separated(
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        title: Text(list[index]["title"],
-                            style: TextStyle(fontSize: 18)),
-                        subtitle: Text(list[index]["desc"]),
-                        onTap: () => AudioManager.instance.play(index: index),
-                      );
-                    },
-                    separatorBuilder: (BuildContext context, int index) =>
-                        Divider(),
-                    itemCount: list.length),
-              ),
-              Center(
-                  child: Text(_error != null
-                      ? _error
-                      : "${AudioManager.instance.info.title} lrc text: $_position")),
-              bottomPanel()
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );
@@ -214,7 +267,7 @@ class _PodcastState extends State<Podcast> {
                 iconSize: 36,
                 icon: Icon(
                   Icons.skip_previous,
-                  color: Colors.black,
+                  color: Colors.grey,
                 ),
                 onPressed: () => AudioManager.instance.previous()),
             IconButton(
@@ -226,20 +279,20 @@ class _PodcastState extends State<Podcast> {
               icon: Icon(
                 isPlaying ? Icons.pause : Icons.play_arrow,
                 size: 48.0,
-                color: Colors.black,
+                color: AppColors.primaryText,
               ),
             ),
             IconButton(
                 iconSize: 36,
                 icon: Icon(
                   Icons.skip_next,
-                  color: Colors.black,
+                  color: Colors.grey,
                 ),
                 onPressed: () => AudioManager.instance.next()),
             IconButton(
                 icon: Icon(
                   Icons.stop,
-                  color: Colors.black,
+                  color: Colors.grey,
                 ),
                 onPressed: () => AudioManager.instance.stop()),
           ],
@@ -253,24 +306,24 @@ class _PodcastState extends State<Podcast> {
       case PlayMode.sequence:
         return Icon(
           Icons.repeat,
-          color: Colors.black,
+          color: Colors.grey,
         );
       case PlayMode.shuffle:
         return Icon(
           Icons.shuffle,
-          color: Colors.black,
+          color: Colors.grey,
         );
       case PlayMode.single:
         return Icon(
           Icons.repeat_one,
-          color: Colors.black,
+          color: Colors.grey,
         );
     }
     return Container();
   }
 
   Widget songProgress(BuildContext context) {
-    var style = TextStyle(color: Colors.black);
+    var style = TextStyle(color: Colors.grey);
     return Row(
       children: <Widget>[
         Text(
@@ -283,8 +336,8 @@ class _PodcastState extends State<Podcast> {
             child: SliderTheme(
                 data: SliderTheme.of(context).copyWith(
                   trackHeight: 2,
-                  thumbColor: Colors.blueAccent,
-                  overlayColor: Colors.blue,
+                  thumbColor: Colors.lightBlue,
+                  overlayColor: Colors.lightBlue,
                   thumbShape: RoundSliderThumbShape(
                     disabledThumbRadius: 5,
                     enabledThumbRadius: 5,
@@ -292,7 +345,7 @@ class _PodcastState extends State<Podcast> {
                   overlayShape: RoundSliderOverlayShape(
                     overlayRadius: 10,
                   ),
-                  activeTrackColor: Colors.blueAccent,
+                  activeTrackColor: Colors.lightBlue,
                   inactiveTrackColor: Colors.grey,
                 ),
                 child: Slider(
@@ -306,7 +359,7 @@ class _PodcastState extends State<Podcast> {
                     if (_duration != null) {
                       Duration msec = Duration(
                           milliseconds:
-                          (_duration.inMilliseconds * value).round());
+                              (_duration.inMilliseconds * value).round());
                       AudioManager.instance.seekTo(msec);
                     }
                   },
@@ -337,7 +390,7 @@ class _PodcastState extends State<Podcast> {
           padding: EdgeInsets.all(0),
           icon: Icon(
             Icons.audiotrack,
-            color: Colors.black,
+            color: AppColors.primaryText,
           ),
           onPressed: () {
             AudioManager.instance.setVolume(0);
@@ -347,6 +400,8 @@ class _PodcastState extends State<Podcast> {
               padding: EdgeInsets.symmetric(horizontal: 0),
               child: Slider(
                 value: _sliderVolume ?? 0,
+                activeColor: AppColors.primaryText,
+                inactiveColor: AppColors.primaryText.withOpacity(0.2),
                 onChanged: (value) {
                   setState(() {
                     _sliderVolume = value;
@@ -356,4 +411,94 @@ class _PodcastState extends State<Podcast> {
               )))
     ]);
   }
+
+  header() => Container(
+        height: 65,
+        margin: EdgeInsets.only(left: 15, right: 15, top: 5),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            GestureDetector(
+                child: Stack(children: <Widget>[
+                  Container(
+                    alignment: Alignment.topLeft,
+                    width: 50,
+                    child: new FlareActor("assets/flare/logo_oapp_small.flr",
+                        fit: BoxFit.contain),
+                  ),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: SvgPicture.asset(_star, // Bright shade at the top
+                        height: 18,
+                        width: 18,
+                        color: _show ? Color(0xFFFFBB1F) : Colors.transparent,
+                        semanticsLabel: 'star notif icon'),
+                  ),
+                ]),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            Container(
+              padding: EdgeInsets.only(top: 5),
+              child: Row(
+                children: <Widget>[
+                  GestureDetector(
+                      child: Container(
+                        height: 25,
+                        width: 35,
+                        alignment: Alignment.centerRight,
+                        margin: EdgeInsets.only(right: 10),
+                        child:
+                            SvgPicture.asset(_search, // Bright shade at the top
+                                height: 22,
+                                width: 22,
+                                semanticsLabel: 'bg bottom image'),
+                      ),
+                      onTap: () {}),
+                  GestureDetector(
+                    child: Container(
+                      height: 25,
+                      width: 30,
+                      alignment: Alignment.centerRight,
+                      child:
+                          SvgPicture.asset(_settings, // Bright shade at the top
+                              height: 22,
+                              width: 22,
+                              color: AppColors.primaryText,
+                              semanticsLabel: 'bg bottom image'),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Settings()),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+
+  title() => Container(
+        width: MediaQuery.of(context).size.width,
+        alignment: Alignment.centerLeft,
+        margin: EdgeInsets.only(top: 20, bottom: 15, left: 15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'Listen Now',
+              style: TextStyle(
+                  color: AppColors.primaryText,
+                  fontWeight: FontWeight.w800,
+                  fontFamily: 'Ubuntu',
+                  fontSize: 20),
+            ),
+          ],
+        ),
+      );
 }

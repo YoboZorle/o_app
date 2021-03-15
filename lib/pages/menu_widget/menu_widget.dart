@@ -401,7 +401,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                           Container(
                             margin: EdgeInsets.only(left: 25),
                             child: Text(
-                              "Podcast",
+                              "The Podcast",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 color: AppColors.primaryText,
