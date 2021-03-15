@@ -51,7 +51,8 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
   final List<String> imgList = [
     'assets/images/tube.jpg',
     'assets/images/web.jpg',
-    'assets/images/ig.jpg'
+    'assets/images/ig.jpg',
+        'assets/images/tweet.jpg'
   ];
 
   @override

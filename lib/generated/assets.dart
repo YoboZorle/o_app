@@ -16,7 +16,7 @@ class Assets {
   static const String flareLogoOappSmall = 'assets/flare/logo_oapp_small.flr';
   static const String flareOappLogoTry = 'assets/flare/oapp_logo_try.flr';
   static const String flareOappSplashAnim = 'assets/flare/oapp_splash_anim.flr';
-  static const String fontsUbuntuRegular = 'assets/fonts/Ubuntu-Regular.ttf';
+  static const String fontsUbuntu-Regular = 'assets/fonts/Ubuntu-Regular.ttf';
   static const String images1 = 'assets/images/1.png';
   static const String images2 = 'assets/images/2.png';
   static const String images3 = 'assets/images/3.png';
@@ -47,7 +47,7 @@ class Assets {
   static const String imagesR4 = 'assets/images/r4.jpg';
   static const String imagesTownhall = 'assets/images/townhall.jpg';
   static const String imagesTube = 'assets/images/tube.jpg';
-  static const String imagesTweet = 'assets/images/tweet.png';
+  static const String imagesTweet = 'assets/images/tweet.jpg';
   static const String imagesWeb = 'assets/images/web.jpg';
   static const String svg1 = 'assets/svg/1.svg';
   static const String svg2 = 'assets/svg/2.svg';

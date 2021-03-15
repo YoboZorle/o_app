@@ -1,3 +1,4 @@
+import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
@@ -117,7 +118,7 @@ class _DigitalAcState extends State<DigitalAc>
                               snap: false,
                               primary: true,
                               forceElevated: innerBoxIsScrolled,
-                              elevation: 0,
+                              elevation: 12,
                               centerTitle: true,
                               backgroundColor: Colors.transparent,
                               expandedHeight: 0.0,
@@ -125,25 +126,56 @@ class _DigitalAcState extends State<DigitalAc>
                               leading: leading(),
                               actions: actions(),
                               bottom: TabBar(
-                                isScrollable: false,
-                                labelPadding: EdgeInsets.only(
-                                    left: 15, right: 15, top: 0),
-                                indicatorPadding:
-                                    EdgeInsets.only(left: 15, right: 15),
+                                // isScrollable: false,
+                                // labelPadding: EdgeInsets.only(
+                                //     left: 15, right: 15, top: 0),
+                                // indicatorPadding:
+                                //     EdgeInsets.only(left: 15, right: 15),
                                 labelStyle: TextStyle(
                                     fontFamily: 'Ubuntu',
-                                    fontSize: 14,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w600,
-                                    letterSpacing: 0.6,
+                                    letterSpacing: 0.5,
                                     color: AppColors.primaryText),
-                                indicatorColor: AppColors.primaryText,
-                                labelColor: AppColors.primaryText,
-                                indicatorWeight: 1.5,
                                 unselectedLabelColor: Colors.grey[400],
+                                indicatorSize: TabBarIndicatorSize.label,
+                                indicator: BubbleTabIndicator(
+                                  indicatorHeight: 35.0,
+                                  indicatorColor: AppColors.primaryText,
+                                  tabBarIndicatorSize: TabBarIndicatorSize.tab,
+                                  // Other flags
+                                  // indicatorRadius: 1,
+                                  // insets: EdgeInsets.all(1),
+                                  // padding: EdgeInsets.all(10)
+                                ),
                                 tabs: [
-                                  Tab(text: "What to Know Today"),
-                                  Tab(text: "Community Feeds"),
+                                  Tab(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(50),
+                                        // border: Border.all(color: Colors.redAccent, width: 1),
+                                      ),
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: Text("What to Know Today"),
+                                      ),
+                                    ),
+                                  ),
 
+                                  Tab(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(50),
+                                        // border: Border.all(color: Colors.redAccent, width: 1),
+                                      ),
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: Text("Community Feeds"),
+                                      ),
+                                    ),
+                                  ),
+                                  // Tab(text: "What to Know Today"),
+                                  // Tab(text: "Community Feeds"),
                                 ],
                               ),
                             ),
@@ -154,7 +186,6 @@ class _DigitalAcState extends State<DigitalAc>
                     body: TabBarView(
                       physics: NeverScrollableScrollPhysics(),
                       children: <Widget>[
-
                         Container(
                           // color: Colors.red.withOpacity(0.2),
                           child: new ListView(
@@ -162,6 +193,7 @@ class _DigitalAcState extends State<DigitalAc>
                               children: <Widget>[
                                 Column(
                                   children: <Widget>[
+                                    SizedBox(height: 8),
                                     newsA1(),
                                     newsA(),
                                     newsTwo(),
@@ -175,6 +207,7 @@ class _DigitalAcState extends State<DigitalAc>
                           child: new ListView(
                               physics: BouncingScrollPhysics(),
                               children: <Widget>[
+                                SizedBox(height: 8),
                                 postA(),
                                 postOne(),
                                 post1(),
@@ -249,16 +282,20 @@ class _DigitalAcState extends State<DigitalAc>
         children: <Widget>[
           Container(
             constraints: BoxConstraints(
-              maxHeight: 160.0, // changed to 400
+              maxHeight: 170.0, // changed to 400
               minHeight: 100.0, // changed to 200
               maxWidth: double.infinity,
               minWidth: double.infinity,
             ),
-            margin: EdgeInsets.symmetric(horizontal: 15),
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://pbs.twimg.com/media/EwOLwcDXIAc_jXr?format=jpg&name=medium',
-              fit: BoxFit.cover,
+            margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                    'https://pbs.twimg.com/media/EwOLwcDXIAc_jXr?format=jpg&name=medium',
+                  )),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              color: Colors.redAccent,
             ),
           ),
           SizedBox(height: 10),
@@ -485,18 +522,24 @@ class _DigitalAcState extends State<DigitalAc>
         children: <Widget>[
           Container(
             constraints: BoxConstraints(
-              maxHeight: 160.0, // changed to 400
+              maxHeight: 170.0, // changed to 400
               minHeight: 100.0, // changed to 200
               maxWidth: double.infinity,
               minWidth: double.infinity,
             ),
-            margin: EdgeInsets.symmetric(horizontal: 15),
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://netstorage-legit.akamaized.net/images/5c8eb2febff6cda0.jpg?imwidth=900',
-              fit: BoxFit.cover,
+            margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                    'https://netstorage-legit.akamaized.net/images/5c8eb2febff6cda0.jpg?imwidth=900',
+                  )),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              color: Colors.redAccent,
             ),
           ),
+
+
           SizedBox(height: 10),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -738,6 +781,7 @@ class _DigitalAcState extends State<DigitalAc>
               trimExpandedText: ' show less',
             ),
           ),
+
           SizedBox(height: 10),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -940,18 +984,23 @@ class _DigitalAcState extends State<DigitalAc>
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+
           Container(
             constraints: BoxConstraints(
-              maxHeight: 160.0, // changed to 400
+              maxHeight: 170.0, // changed to 400
               minHeight: 100.0, // changed to 200
               maxWidth: double.infinity,
               minWidth: double.infinity,
             ),
-            margin: EdgeInsets.symmetric(horizontal: 15),
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://pbs.twimg.com/media/EJa_nXXXsAAYA2k?format=jpg&name=medium',
-              fit: BoxFit.cover,
+            margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                      'https://pbs.twimg.com/media/EJa_nXXXsAAYA2k?format=jpg&name=medium',
+                  )),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              color: Colors.redAccent,
             ),
           ),
           SizedBox(height: 10),
@@ -1176,16 +1225,20 @@ class _DigitalAcState extends State<DigitalAc>
         children: <Widget>[
           Container(
             constraints: BoxConstraints(
-              maxHeight: 160.0, // changed to 400
+              maxHeight: 170.0, // changed to 400
               minHeight: 100.0, // changed to 200
               maxWidth: double.infinity,
               minWidth: double.infinity,
             ),
-            margin: EdgeInsets.symmetric(horizontal: 15),
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://www.expressiveinfo.com/wp-content/uploads/2020/02/Nasir-El-Rufai.jpeg',
-              fit: BoxFit.cover,
+            margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                    'https://www.expressiveinfo.com/wp-content/uploads/2020/02/Nasir-El-Rufai.jpeg',
+                  )),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              color: Colors.redAccent,
             ),
           ),
           SizedBox(height: 10),
@@ -1410,16 +1463,20 @@ class _DigitalAcState extends State<DigitalAc>
         children: <Widget>[
           Container(
             constraints: BoxConstraints(
-              maxHeight: 160.0, // changed to 400
+              maxHeight: 170.0, // changed to 400
               minHeight: 100.0, // changed to 200
               maxWidth: double.infinity,
               minWidth: double.infinity,
             ),
-            margin: EdgeInsets.symmetric(horizontal: 15),
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://pbs.twimg.com/media/EgrTzByXcAAZ6w-?format=jpg&name=medium',
-              fit: BoxFit.cover,
+            margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                    'https://pbs.twimg.com/media/EgrTzByXcAAZ6w-?format=jpg&name=medium',
+                  )),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              color: Colors.redAccent,
             ),
           ),
           SizedBox(height: 10),
@@ -1866,16 +1923,20 @@ class _DigitalAcState extends State<DigitalAc>
         children: <Widget>[
           Container(
             constraints: BoxConstraints(
-              maxHeight: 160.0, // changed to 400
+              maxHeight: 170.0, // changed to 400
               minHeight: 100.0, // changed to 200
               maxWidth: double.infinity,
               minWidth: double.infinity,
             ),
-            margin: EdgeInsets.symmetric(horizontal: 15),
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://pbs.twimg.com/media/EeZvdCcXYAAJgrw?format=jpg&name=medium',
-              fit: BoxFit.cover,
+            margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                    'https://pbs.twimg.com/media/EeZvdCcXYAAJgrw?format=jpg&name=medium',
+                  )),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              color: Colors.redAccent,
             ),
           ),
           SizedBox(height: 10),
@@ -2347,10 +2408,13 @@ class _DigitalAcState extends State<DigitalAc>
               minWidth: double.infinity,
             ),
             margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://cdn03.allafrica.com/download/pic/main/main/csiid/00471990:e1e573b2f129ab7aeba4a1027b20e9d5:arc614x376:w614:us1.jpg',
-              fit: BoxFit.cover,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                      'https://cdn03.allafrica.com/download/pic/main/main/csiid/00471990:e1e573b2f129ab7aeba4a1027b20e9d5:arc614x376:w614:us1.jpg')),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              color: Colors.redAccent,
             ),
           ),
           Row(
@@ -2588,10 +2652,14 @@ class _DigitalAcState extends State<DigitalAc>
               minWidth: double.infinity,
             ),
             margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://pbs.twimg.com/media/EwN3B8DWEAA9ASh?format=jpg&name=large',
-              fit: BoxFit.cover,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                'https://pbs.twimg.com/media/EwN3B8DWEAA9ASh?format=jpg&name=large',
+                  )),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              color: Colors.redAccent,
             ),
           ),
           Row(
@@ -2818,6 +2886,7 @@ class _DigitalAcState extends State<DigitalAc>
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+
           Container(
             constraints: BoxConstraints(
               maxHeight: 160.0, // changed to 400
@@ -2826,10 +2895,14 @@ class _DigitalAcState extends State<DigitalAc>
               minWidth: double.infinity,
             ),
             margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://pbs.twimg.com/media/EwR_UVpWEAIOz54?format=jpg&name=medium',
-              fit: BoxFit.cover,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                    'https://pbs.twimg.com/media/EwR_UVpWEAIOz54?format=jpg&name=medium',
+                  )),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              color: Colors.redAccent,
             ),
           ),
           Row(
@@ -3056,6 +3129,7 @@ class _DigitalAcState extends State<DigitalAc>
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+
           Container(
             constraints: BoxConstraints(
               maxHeight: 160.0, // changed to 400
@@ -3064,12 +3138,17 @@ class _DigitalAcState extends State<DigitalAc>
               minWidth: double.infinity,
             ),
             margin: EdgeInsets.only(left: 15, right: 15, bottom: 10),
-            decoration: BoxDecoration(),
-            child: Image.network(
-              'https://pbs.twimg.com/media/EwO0JLvWYAEOJzx?format=jpg&name=medium',
-              fit: BoxFit.cover,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                    'https://pbs.twimg.com/media/EwO0JLvWYAEOJzx?format=jpg&name=medium',
+                  )),
+              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              color: Colors.redAccent,
             ),
           ),
+
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
