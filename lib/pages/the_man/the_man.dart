@@ -166,7 +166,8 @@ class GalleryStaggeredGridView extends StatelessWidget {
   int videoIndex = 1;
   List<int> videosIndex = [];
   List<String> images = [
-    'https://lh3.googleusercontent.com/proxy/cj_hiLwUVg3k9pTCBLUhvcZfEAbpWKolGZuPHpbn2FxH4yIyac6SdZBJ_RhJRcMxXADVqyXgHY79g4lGybQD2qvTqhbRFl78MOdlDTQwZvyv29mL',
+    'https://www.naijaloaded.com.ng/wp-content/uploads/2016/07/nasir.png',
+   'https://www.channelstv.com/wp-content/uploads/2018/01/Buhari-Train3.jpg',
     'https://i.ytimg.com/vi/erAc_X2Bhl4/maxresdefault.jpg',
 'https://guardian.ng/wp-content/uploads/2019/08/Nasir-el-Rufai-and-wife-Aisha.jpg',
     'https://i1.wp.com/dailynigerian.com/wp-content/uploads/2018/09/Nasir-Elrufai-El-Rufai.jpg',
@@ -182,6 +183,7 @@ class GalleryStaggeredGridView extends StatelessWidget {
 'https://pbs.twimg.com/media/Dtk8icWXQAAgw9g.jpg',
     'https://pbs.twimg.com/media/D-EoOEQWwAAbBUD.jpg',
     'https://www.expressiveinfo.com/wp-content/uploads/2020/02/Nasir-El-Rufai.jpeg',
+    'https://www.ripplesnigeria.com/wp-content/uploads/2020/03/malam-il-rufai-8.jpg',
   ];
 
   GalleryStaggeredGridView() {
